@@ -1,0 +1,6 @@
+Contraseña de aplicación generada
+Tu contraseña de aplicación para el dispositivo
+(((dznr bdlg oynq mduz)))
+Cómo utilizarla
+Accede a la sección de configuración de tu cuenta de Google en la aplicación o el dispositivo que estés intentando configurar. Sustituye tu contraseña por la contraseña de 16 caracteres que se muestra arriba.
+Al igual que la contraseña normal, esta contraseña de aplicación ofrece acceso completo a tu cuenta de Google. No tendrás que recordarla, así que no la escribas ni la compartas con nadie.

@@ -1,0 +1,17 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "stripe/stripe-php": "^13.10",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
