@@ -1,5 +1,5 @@
 <?php
-require "/Futbolero/BasesDatos/DatabaseInterface.php"
+require 'DatabaseInterface.php';
 class MySQLDatabase implements DatabaseInterface {
     private $connection;
 
