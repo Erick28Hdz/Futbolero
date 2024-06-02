@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/FrontEnd/css/Plataforma/Terminos_Condiciones.css" />
+    <title>Terminos y condiciones</title>
+</head>
+
+<body>
+  <header>
+    <section class="SeccionHeader">
+      <div class="BarraNavegacion">
+        <nav class="navbar bg-body-tertiary border-bottom fixed-top">
+          <div class="container-fluid">
+            <div class="NavFutbolero">
+              <a class="navbar-brand" href="#"
+                ><img
+                  class="logoIcono"
+                  src="/FrontEnd/img/iconos/icono futbolero.png"
+                  alt=""
+                />Futbolero</a
+              >
+              <p class="Slogan">Tú Ganador</p>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <img
+                  class="logoIcono"
+                  src="/FrontEnd/img/iconos/icono futbolero.png"
+                  alt=""
+                />
+                <h3 class="offcanvas-title" id="offcanvasNavbarLabel">
+                  Menú Futbolero
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <form class="d-flex mt-3" role="search">
+                  <div class="input-wrapper2">
+                    <button class="icon2">
+                      <img src="/FrontEnd/img/Iconos/buscar.png" alt="" />
+                    </button>
+                    <input
+                      type="text"
+                      name="text"
+                      class="input2"
+                      placeholder="Buscar"
+                    />
+                  </div>
+                </form>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/FrontEnd/html/Administradores/Administrador.html"
+                      ><img
+                        src="/FrontEnd/img/Iconos/human-resources.png"
+                        alt=""
+                      />Administrador</a
+                    >
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/FrontEnd/html/Inicio_sesion/Inicio.html"
+                      ><img src="/FrontEnd/img/Iconos/house.png" alt="" />
+                      Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img
+                        src="/FrontEnd/img/Iconos/campeonato-de-futbol.png"
+                        alt=""
+                      />
+                      Fútbol profesional
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Nacionales/SelNacionales.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/world-cup.png"
+                            alt=""
+                          />Selecciones Nacionales</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Ligas/Ligas.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/competition.png"
+                            alt=""
+                          />
+                          Competiciones profesionales</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Clubes/Clubes.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/club-de-futbol.png"
+                            alt=""
+                          />Clubes profesionales de Fútbol</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Jugadores/Jugadores.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/equipo.png"
+                            alt=""
+                          />Plantillas profesionales</a
+                        >
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Fichajes/Fichajes.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/decision.png"
+                            alt=""
+                          />Mercado de fichajes</a
+                        >
+                      </li>
+                    </ul>
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img
+                        src="/FrontEnd/img/Iconos/content-creator.png"
+                        alt=""
+                      />
+                      Contenido
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Noticias/Noticias.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/noticias.png"
+                            alt=""
+                          />Notícias</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Calendario/Partidos.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/calendario.png"
+                            alt=""
+                          />Calendario de partidos</a
+                        >
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Foros/Foros.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/grupo.png"
+                            alt=""
+                          />Fóros</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Estadisticas/Estadisticas.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/estadisticas.png"
+                            alt=""
+                          />Estadísticas</a
+                        >
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img
+                        src="/FrontEnd/img/Iconos/contactanos.png"
+                        alt=""
+                      />
+                      Sobre nosotros
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Contacto/RedeSociales.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/mercadeo-social.png"
+                            alt=""
+                          />Contactenos</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Plataforma/Terminos_Condiciones.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/contrato.png"
+                            alt=""
+                          />Terminos y condiciones</a
+                        >
+                      </li>
+                    </ul>
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="/FrontEnd/html/Usuarios/Perfil.html"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img src="/FrontEnd/img/Iconos/verified.png" alt="" />
+                      Preferencias
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/Perfil.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/perfil-usuario.png"
+                            alt=""
+                          />Mi perfil</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/administracion.png"
+                            alt=""
+                          />Editar perfil</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/administracion-del-dinero.png"
+                            alt=""
+                          />Actualizar membresia</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/titulo.png"
+                            alt=""
+                          />Personalizar perfil</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/satisfaccion.png"
+                            alt=""
+                          />Editar preferencias</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/alerta.png"
+                            alt=""
+                          />Configurar notificaciones</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="Cabecera">
+        <div class="Seccionbotonatras">
+          <a id="BotonAtras" href="/FrontEnd/html/Plataforma/Inicio.html"
+            ><img src="/FrontEnd/img/iconos/atras.png" alt="" class="atras"
+          /></a>
+          <a id="BotonAtras" href="/FrontEnd/html/Plataforma/Inicio.html"
+            ><img
+              src="/FrontEnd/img/iconos/adelante.png"
+              alt=""
+              class="atras"
+          /></a>
+          <h5>Miembro Premium</h5>
+        </div>
+        <div class="MarcaFutbolero">
+          <img
+            class="logo"
+            src="/FrontEnd/img/iconos/icono futbolero.png"
+            alt="Imagen 2"
+          />
+          <h1>Futbolero</h1>
+          <h2>Tú Ganador</h2>
+        </div>
+        <div class="SeccionPersonal">
+          <div class="BotonesPrincipales">
+            <div class="input-container">
+              <input
+                type="text"
+                name="text"
+                class="input"
+                placeholder="Escribe tú busqueda"
+              />
+              <img
+                class="icon"
+                src="/FrontEnd/img/Iconos/buscar.png"
+                alt=""
+              />
+            </div>
+            <input type="checkbox" id="checkboxInput" />
+            <label for="checkboxInput" class="toggleSwitch">
+              <div class="speaker">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.0"
+                  viewBox="0 0 75 75"
+                >
+                  <path
+                    d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
+                    style="
+                      stroke: #fff;
+                      stroke-width: 5;
+                      stroke-linejoin: round;
+                      fill: #fff;
+                    "
+                  ></path>
+                  <path
+                    d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
+                    style="
+                      fill: none;
+                      stroke: #fff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                    "
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="mute-speaker">
+                <svg
+                  version="1.0"
+                  viewBox="0 0 75 75"
+                  stroke="#fff"
+                  stroke-width="5"
+                >
+                  <path
+                    d="m39,14-17,15H6V48H22l17,15z"
+                    fill="#fff"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="m49,26 20,24m0-24-20,24"
+                    fill="#fff"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <form
+              action="/BackEnd/Plataforma/cerrar_sesion.php"
+              method="post"
+            >
+              <button type="submit" class="Btn">
+                <div class="sign">
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text">Cerrar sesión</div>
+              </button>
+            </form>
+          </div>
+          <div class="audio-player">
+            <div class="player-controls">
+              <div class="song-info">
+                <div class="song-title">Canción</div>
+                <p class="artist">Artista</p>
+              </div>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+              <div class="buttons">
+                <button class="skip-btn">
+                  <img src="/FrontEnd/img/Iconos/anterior.png" alt="" />
+                </button>
+                <button class="play-btn">
+                  <img src="/FrontEnd/img/Iconos/play.png" alt="" />
+                </button>
+                <button class="play-btn">
+                  <img src="/FrontEnd/img/Iconos/pause.png" alt="" />
+                </button>
+                <button class="pause-btn">
+                  <img src="/FrontEnd/img/Iconos/parar.png" alt="" />
+                </button>
+                <button class="volume-btn">
+                  <img src="/FrontEnd/img/Iconos/siguiente.png" alt="" />
+                </button>
+                <label class="slider">
+                  <input type="range" class="level" />
+                  <img
+                    class="volume"
+                    src="/FrontEnd/img/Iconos/altavoz.png"
+                    alt=""
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+    <main>
+        <h4>Terminos y condiciones</h4>
+        <div class="card">
+            <h3>Terminos y condiciones</h3>
+            <section>
+                <section>
+                    <h5>1. Uso del Sitio Web</h5>
+                    <p>Al acceder y utilizar el sitio web de Futbolero, aceptas cumplir con estos términos y condiciones en su totalidad.</p>
+            
+                    <p>El sitio web de Futbolero proporciona información sobre eventos deportivos, noticias, análisis, estadísticas y otros contenidos relacionados con el mundo del fútbol.</p>
+                    
+                    <p>Para acceder a ciertas funciones del sitio web, como la creación de una cuenta de usuario, la suscripción a boletines informativos, la participación en encuestas o la compra de productos y servicios, es posible que necesites registrarte como usuario. Durante el proceso de registro, debes proporcionar información precisa, actualizada y veraz.</p>
+                    
+                    <p>El uso del sitio web está sujeto a nuestra política de privacidad, que describe cómo recopilamos, almacenamos y utilizamos la información personal de los usuarios. Te recomendamos revisar nuestra política de privacidad para comprender cómo tratamos tus datos personales.</p>
+            
+                    <p>Todo el contenido del sitio web de Futbolero, incluyendo textos, imágenes, videos, gráficos, logotipos, marcas registradas y otros elementos multimedia, es propiedad de Futbolero o de sus licenciantes, y está protegido por las leyes de propiedad intelectual. No está permitido copiar, modificar, distribuir, transmitir, reproducir, o utilizar de ninguna manera dicho contenido sin autorización previa y por escrito de Futbolero.</p>
+                    
+                    <p>El sitio web de Futbolero puede contener enlaces a sitios web de terceros. Estos enlaces se proporcionan únicamente para su conveniencia, y no implican un respaldo o una garantía por parte de Futbolero respecto a dichos sitios web o su contenido. Futbolero no asume ninguna responsabilidad por el contenido o las prácticas de privacidad de estos sitios web de terceros.</p>
+            
+                    <p>Futbolero se reserva el derecho de modificar, suspender o descontinuar cualquier aspecto del sitio web en cualquier momento y sin previo aviso. Esto puede incluir cambios en funcionalidades, diseños, políticas o términos y condiciones. Sin embargo, nos esforzaremos por comunicar cualquier cambio importante a los usuarios mediante notificaciones en el sitio web o por otros medios.</p>
+                    
+                    <p>El uso del sitio web de Futbolero es gratuito para los usuarios, a menos que se indique lo contrario en ciertas secciones o funcionalidades que requieran el pago de una tarifa. En caso de que se ofrezcan servicios o productos de pago, se aplicarán términos y condiciones adicionales que el usuario deberá aceptar antes de completar la transacción.</p>
+                    
+                    <p>Si tienes alguna pregunta o inquietud sobre estos términos y condiciones, por favor contáctanos a través de [correo electrónico de contacto] o [número de teléfono]. Estaremos encantados de ayudarte y aclarar cualquier duda que puedas tener.</p>
+                    
+                    <p>Ultima actualizacion 27/02/2024</p>
+                </section>
+        
+                <section>
+                    <h5>2. Contenido</h5>
+                    <p>Todo el contenido proporcionado en el sitio web de Futbolero es solo para fines informativos y de entretenimiento. Nos esforzamos por ofrecer una amplia variedad de contenido relacionado con el mundo del fútbol, incluyendo noticias, análisis, opiniones, estadísticas, datos de eventos deportivos, entrevistas, videos, imágenes y otros materiales que pueden resultar interesantes y útiles para nuestros usuarios.</p>
+                
+                    <p>Nuestro equipo editorial trabaja diligentemente para asegurar la precisión y relevancia de la información presentada en el sitio web. Sin embargo, no garantizamos la exactitud, integridad o actualidad del contenido en todo momento. Los eventos deportivos y las noticias están sujetos a cambios repentinos, y aunque nos esforzamos por mantenernos al día con los últimos acontecimientos, puede haber ocasiones en las que la información proporcionada no esté completamente actualizada.</p>
+                
+                    <p>Es importante destacar que el contenido presentado en el sitio web de Futbolero está destinado a ser informativo y no debe ser considerado como asesoramiento profesional o recomendaciones específicas. Los usuarios son responsables de evaluar la exactitud y la idoneidad del contenido para sus propios propósitos y deben tomar decisiones informadas basadas en su propio juicio y análisis.</p>
+                
+                    <p>Además, algunos de los artículos, opiniones o comentarios expresados en el sitio web pueden ser de naturaleza subjetiva y reflejar las opiniones personales de los autores o colaboradores. No nos hacemos responsables de las opiniones expresadas por terceros y no necesariamente respaldamos o aprobamos todos los puntos de vista presentados en el sitio web.</p>
+                
+                    <p>El contenido del sitio web de Futbolero se actualiza regularmente para proporcionar a nuestros usuarios la información más reciente y relevante sobre el mundo del fútbol. Sin embargo, no podemos garantizar la disponibilidad continua de ciertos tipos de contenido o la ausencia de interrupciones en el servicio debido a factores fuera de nuestro control, como problemas técnicos o de mantenimiento.</p>
+                
+                    <p>Si encuentras algún error, inexactitud o problema con el contenido del sitio web, te agradeceríamos que nos lo comuniques para que podamos corregirlo y mejorar la experiencia de nuestros usuarios.</p>
+                
+                    <p>Para cualquier pregunta, comentario o sugerencia relacionada con el contenido del sitio web de Futbolero, no dudes en ponerte en contacto con nuestro equipo editorial a través de [correo electrónico de contacto] o [número de teléfono]. Estamos aquí para ayudarte y proporcionarte la mejor experiencia posible.</p>
+                
+                    <p>Última actualización: 27/02/2024</p>
+                </section>
+                
+                <section>
+                    <h5>3. Registro</h5>
+                    <p>Para acceder a ciertas funciones y servicios adicionales en el sitio web de Futbolero, puede ser necesario registrarse como usuario. El registro es gratuito y solo requiere que proporciones cierta información básica. A continuación, detallamos el proceso de registro y los datos que podrían ser solicitados:</p>
+                    <ol>
+                        <li><strong>Información Personal:</strong> Durante el proceso de registro, es posible que se te solicite proporcionar información personal básica, como tu nombre completo, dirección de correo electrónico, fecha de nacimiento, y país de residencia. Esta información es necesaria para crear tu cuenta de usuario y proporcionarte un acceso personalizado a los servicios de Futbolero.</li>
+                        <li><strong>Nombre de Usuario y Contraseña:</strong> Deberás elegir un nombre de usuario único y una contraseña segura para acceder a tu cuenta en el sitio web de Futbolero. Es importante que selecciones una contraseña que sea fácil de recordar pero difícil de adivinar, y que mantengas tu información de inicio de sesión confidencial para proteger la seguridad de tu cuenta.</li>
+                        <li><strong>Preferencias de Usuario:</strong> Además de la información básica, puedes tener la opción de proporcionar preferencias de usuario adicionales, como tus equipos favoritos, ligas de interés, idioma preferido, y notificaciones personalizadas. Estas preferencias nos ayudan a personalizar tu experiencia en el sitio web y proporcionarte contenido relevante y específico a tus intereses.</li>
+                        <li><strong>Consentimiento y Aceptación de Términos:</strong> Antes de completar el proceso de registro, es posible que se te solicite que revises y aceptes los términos y condiciones de uso del sitio web de Futbolero, así como nuestra política de privacidad. Es importante leer estos documentos detenidamente y comprender tus derechos y responsabilidades como usuario antes de proceder con el registro.</li>
+                    </ol>
+                    <p>Una vez que hayas completado el proceso de registro y creado tu cuenta de usuario en el sitio web de Futbolero, tendrás acceso a una variedad de funciones y servicios adicionales, como la capacidad de personalizar tu perfil, participar en discusiones y comentarios, recibir notificaciones sobre eventos y noticias relevantes, y acceder a contenido exclusivo para miembros.</p>
+                    <p>Es importante tener en cuenta que eres responsable de mantener la seguridad de tu cuenta y de cualquier actividad que ocurra bajo tu nombre de usuario. Te recomendamos que tomes medidas para proteger tu información de inicio de sesión y que informes cualquier actividad sospechosa o no autorizada a nuestro equipo de soporte técnico de inmediato.</p>
+                </section>
+                
+                <section>
+                    <h5>4. Privacidad</h5>
+                    <p>En Futbolero, nos tomamos muy en serio la privacidad de nuestros usuarios. Esta sección describe cómo recopilamos, usamos, protegemos y divulgamos la información personal que obtenemos de los usuarios de nuestro sitio web.</p>
+                
+                    <p><strong>Recopilación de información:</strong> Recopilamos información personal de los usuarios cuando se registran en nuestro sitio, completan formularios, participan en encuestas, realizan compras o interactúan con otras actividades disponibles en nuestro sitio. La información recopilada puede incluir nombres, direcciones de correo electrónico, información de contacto y otra información relevante para brindar servicios personalizados.</p>
+                
+                    <p><strong>Uso de la información:</strong> Utilizamos la información personal recopilada para proporcionar y mejorar nuestros servicios, personalizar la experiencia del usuario, procesar transacciones, enviar correos electrónicos periódicos y responder a las consultas de los usuarios. Además, podemos utilizar la información para fines de marketing y promoción de nuestros productos y servicios.</p>
+                
+                    <p><strong>Protección de la información:</strong> Nos comprometemos a proteger la información personal de nuestros usuarios mediante medidas de seguridad adecuadas para evitar el acceso no autorizado, la divulgación, la alteración o la destrucción de los datos. Implementamos protocolos de seguridad estándar de la industria y mantenemos nuestras prácticas de seguridad actualizadas para garantizar la seguridad de la información del usuario.</p>
+                
+                    <p><strong>Divulgación de información:</strong> No compartimos, vendemos ni alquilamos información personal de usuarios a terceros sin su consentimiento, excepto en los casos en que sea necesario para cumplir con la ley, hacer cumplir nuestras políticas o proteger nuestros derechos, propiedad o seguridad, o los de otros usuarios.</p>
+                
+                    <p><strong>Enlaces a sitios externos:</strong> Nuestro sitio web puede contener enlaces a sitios web de terceros. No nos hacemos responsables de las prácticas de privacidad o el contenido de estos sitios web externos. Se recomienda a los usuarios que revisen las políticas de privacidad de estos sitios antes de proporcionar cualquier información personal.</p>
+                
+                    <p>Al utilizar nuestro sitio web, los usuarios aceptan nuestra política de privacidad y el tratamiento de su información personal de acuerdo con los términos establecidos en esta sección.</p>
+                
+                    <p>Última actualización: 27/02/2024</p>
+                </section>
+                
+                <section>
+                    <h5>5. Propiedad Intelectual</h5>
+                    <p>En Futbolero, valoramos y respetamos la propiedad intelectual. Esta sección establece nuestros derechos y políticas con respecto al contenido y los derechos de autor en nuestro sitio web.</p>
+                
+                    <p><strong>Derechos de autor:</strong> Todo el contenido disponible en el sitio web de Futbolero, incluyendo textos, imágenes, videos, gráficos, logotipos, marcas registradas y otros elementos multimedia, está protegido por leyes de derechos de autor. Futbolero o sus licenciantes poseen todos los derechos de autor sobre este contenido.</p>
+                
+                    <p><strong>Uso del contenido:</strong> Los usuarios pueden acceder y utilizar el contenido del sitio web de Futbolero únicamente con fines personales y no comerciales. No se permite la reproducción, distribución, modificación o cualquier otro uso del contenido sin autorización previa y por escrito de Futbolero.</p>
+                
+                    <p><strong>Uso de marcas registradas:</strong> Las marcas registradas y logotipos utilizados en el sitio web de Futbolero son propiedad de Futbolero o de terceros licenciantes. No se permite el uso no autorizado de estas marcas registradas y logotipos sin el consentimiento expreso de Futbolero.</p>
+                
+                    <p><strong>Protección de la propiedad intelectual:</strong> Futbolero se reserva el derecho de tomar medidas legales adecuadas contra cualquier infracción de sus derechos de propiedad intelectual. Esto puede incluir acciones legales para hacer valer los derechos de autor, las marcas comerciales u otros derechos de propiedad.</p>
+                
+                    <p><strong>Reporte de infracciones:</strong> Si crees que tu propiedad intelectual ha sido utilizada de manera que constituya una violación de los derechos de autor u otros derechos de propiedad en el sitio web de Futbolero, por favor contáctanos de inmediato para que podamos abordar la situación de manera adecuada.</p>
+                
+                    <p>Al acceder y utilizar nuestro sitio web, los usuarios aceptan respetar y cumplir con nuestros derechos de propiedad intelectual y las políticas establecidas en esta sección.</p>
+                
+                    <p>Última actualización: 27/02/2024</p>
+                </section>
+                
+                <section>
+                    <h5>6. Limitación de Responsabilidad</h5>
+                    <p>Nos esforzamos por proporcionar un servicio confiable y preciso a través del sitio web de Futbolero. Sin embargo, es importante que los usuarios comprendan las limitaciones y exenciones de responsabilidad que se aplican al utilizar nuestro sitio.</p>
+                
+                    <p><strong>Exactitud del contenido:</strong> Aunque nos esforzamos por mantener la precisión y la actualización de la información proporcionada en nuestro sitio web, no podemos garantizar que todos los datos sean siempre completos, precisos o actualizados. Los usuarios deben verificar cualquier información crítica antes de tomar decisiones basadas en ella.</p>
+                
+                    <p><strong>Uso del sitio bajo su propio riesgo:</strong> El uso del sitio web de Futbolero se realiza bajo la propia responsabilidad del usuario. No asumimos responsabilidad por cualquier daño directo, indirecto, incidental, especial, emergente o punitivo que pueda surgir del acceso o el uso del sitio, incluyendo, entre otros, pérdida de ingresos, pérdida de datos o interrupción del negocio.</p>
+                
+                    <p><strong>Exención de garantías:</strong> Futbolero proporciona el sitio web y su contenido "tal cual" y "según disponibilidad". No otorgamos ninguna garantía, expresa o implícita, con respecto al funcionamiento del sitio, la exactitud del contenido, la disponibilidad de funciones, la seguridad o la ausencia de errores. Los usuarios asumen todos los riesgos asociados con el uso del sitio.</p>
+                
+                    <p><strong>Interrupciones y errores:</strong> Futbolero no garantiza que el sitio esté libre de interrupciones, errores, virus u otros componentes dañinos. No seremos responsables de ninguna pérdida o daño causado por la interrupción del servicio, errores en el contenido, la transmisión de virus u otros eventos fuera de nuestro control.</p>
+                
+                    <p><strong>Limitación de responsabilidad legal:</strong> En la medida máxima permitida por la ley aplicable, Futbolero y sus afiliados no serán responsables ante los usuarios por ningún tipo de daño, ya sea directo, indirecto, incidental, especial, emergente o punitivo, incluso si se nos ha informado de la posibilidad de tales daños.</p>
+                
+                    <p>Al utilizar nuestro sitio web, los usuarios aceptan estos términos de limitación de responsabilidad y exención de garantías. Si no estás de acuerdo con estos términos, te recomendamos que no utilices nuestro sitio.</p>
+                
+                    <p>Última actualización: 27/02/2024</p>
+                </section>
+                
+                <section>
+                    <h5>7. Modificaciones</h5>
+                    <p>Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento y sin previo aviso. Las modificaciones entrarán en vigencia inmediatamente después de su publicación en el sitio web de Futbolero. Al continuar utilizando el sitio después de la publicación de las modificaciones, aceptas los términos actualizados y te comprometes a cumplir con ellos.</p>
+                
+                    <p><strong>Notificación de cambios:</strong> Haremos todo lo posible para notificar a los usuarios sobre cualquier cambio importante en los términos y condiciones. Esto puede incluir notificaciones en el sitio web, correos electrónicos a los usuarios registrados o publicaciones en nuestras redes sociales. Sin embargo, no podemos garantizar que todas las actualizaciones serán comunicadas de manera individual a cada usuario.</p>
+                
+                    <p><strong>Revisión regular:</strong> Recomendamos a los usuarios revisar periódicamente los términos y condiciones para mantenerse informados sobre cualquier cambio. La fecha de la última actualización se indicará al final de los términos y condiciones para que los usuarios puedan verificar rápidamente si ha habido modificaciones desde su última visita al sitio.</p>
+                
+                    <p><strong>Aceptación de los cambios:</strong> Al continuar utilizando el sitio web de Futbolero después de la publicación de las modificaciones, aceptas los términos actualizados y te comprometes a cumplir con ellos. Si no estás de acuerdo con los cambios realizados, tu único recurso es dejar de utilizar el sitio y cerrar tu cuenta de usuario, si aplicable.</p>
+                
+                    <p><strong>Conservación de versiones anteriores:</strong> Nos reservamos el derecho de mantener versiones anteriores de los términos y condiciones para referencia histórica y para resolver disputas legales o reclamaciones que puedan surgir en el futuro.</p>
+                
+                    <p>Es responsabilidad del usuario revisar regularmente los términos y condiciones y mantenerse informado sobre cualquier cambio. Si tienes alguna pregunta o inquietud sobre las modificaciones realizadas, no dudes en ponerte en contacto con nosotros.</p>
+                
+                    <p>Última actualización: 27/02/2024</p>
+                </section>
+                
+                <section>
+                    <h5>8. Ley Aplicable</h5>
+                    <p>Estos términos y condiciones se rigen e interpretan de acuerdo con las leyes del país en el que está ubicada la sede de Futbolero. Cualquier disputa relacionada con estos términos y condiciones, incluyendo su interpretación, validez y cumplimiento, estará sujeta a la jurisdicción exclusiva de los tribunales del mencionado país.</p>
+                
+                    <p>Al aceptar estos términos y condiciones, renuncias a cualquier objeción respecto a la jurisdicción o competencia de dichos tribunales y te comprometes a someterte a su jurisdicción para resolver cualquier disputa legal que pueda surgir en relación con el uso del sitio web de Futbolero o la interpretación de estos términos y condiciones.</p>
+                
+                    <p>Si alguna disposición de estos términos y condiciones se considera inválida, ilegal o inaplicable por un tribunal competente, dicha disposición será eliminada en la medida mínima necesaria para que los términos y condiciones restantes continúen siendo válidos, legales y aplicables.</p>
+                
+                    <p>El hecho de que Futbolero no haga valer o ejercer cualquier derecho o disposición de estos términos y condiciones no constituirá una renuncia a dicho derecho o disposición, a menos que se establezca lo contrario por escrito por parte de Futbolero.</p>
+                
+                    <p>Si tienes alguna pregunta sobre la ley aplicable o cualquier otra disposición de estos términos y condiciones, no dudes en contactarnos para obtener más información.</p>
+                
+                    <p>Última actualización: 27/02/2024</p>
+                </section>
+                
+                <section>
+                    <h5>9. Aceptación de los Términos y Condiciones</h5>
+                    <p>Al acceder y utilizar el sitio web de Futbolero, aceptas todos los términos y condiciones establecidos en este documento. Si no estás de acuerdo con alguno de estos términos, te recomendamos que no utilices nuestro sitio web.</p>
+                
+                    <p>Es importante que revises regularmente estos términos y condiciones para mantenerte informado sobre cualquier cambio o actualización. El uso continuado del sitio web después de la publicación de modificaciones constituirá tu aceptación de dichas modificaciones.</p>
+                
+                    <p>Si tienes alguna pregunta o inquietud sobre estos términos y condiciones, no dudes en contactarnos para obtener más información.</p>
+                
+                    <p>Última actualización: 27/02/2024</p>
+                </section>
+                
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="MainFooter">
+          <div class="InformacionFooter">
+            <div class="Asociados">
+              <h4>Nuestros Asociados</h4>
+              <section class="InfoAsociados">
+                <div class="ImgInformacion">
+                  <img src="/FrontEnd/img/Asociados/ArteGestión 0 1.png" alt="" />
+                  <span>ArteGestión</span>
+                </div>
+                <div class="ImgInformacion">
+                  <img src="/FrontEnd/img/Asociados/logo gbo 2023.png" alt="" />
+                  <span>Taller Gabriel</span>
+                </div>
+              </section>
+            </div>
+            <div>
+              <h4>Nuestas marcas</h4>
+            </div>
+          </div>
+  
+          <div class="RedesyContacto">
+            <span><h4>Siguenos en nuestras redes</h4></span>
+            <div class="social-card">
+              <button class="BtnRedes">
+                <span class="ImgContainer">
+                  <img src="/FrontEnd/img/Iconos/facebook-new.png" alt="" />
+                </span>
+                <span class="BG"></span>
+              </button>
+  
+              <button class="BtnRedes">
+                <span class="ImgContainer">
+                  <img src="/FrontEnd/img/Iconos/instagram-new.png" alt="" />
+                </span>
+                <span class="BG"></span>
+              </button>
+  
+              <button class="BtnRedes">
+                <span class="ImgContainer">
+                  <img src="/FrontEnd/img/Iconos/youtube-new.png" alt="" />
+                </span>
+                <span class="BG"></span>
+              </button>
+  
+              <button class="BtnRedes">
+                <span class="ImgContainer">
+                  <img src="/FrontEnd/img/Iconos/tik-tok-new.png" alt="" />
+                </span>
+                <span class="BG"></span>
+              </button>
+            </div>
+            <div class="newsletter-form">
+              <h5 class="heading">Estaremos en contacto contigo</h5>
+              <form class="form">
+                <input
+                  required=""
+                  placeholder="Ingresa tú correo electronico"
+                  name="email"
+                  id="email"
+                  type="email"
+                />
+                <input value="Contacto" type="submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4>Bogotá- Colombia &copy; 2024</h4>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

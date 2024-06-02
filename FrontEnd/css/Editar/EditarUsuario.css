@@ -1,0 +1,114 @@
+:root {
+  --color-negro: #000000;
+  --color-rojo: #841818;
+  --color-amarillo: #e0bb20;
+  --titulos: Bungee;
+  --subtitulos: fuente-rubik-mono-one;
+  --contenidos: Suravaram;
+  --botones: Kanit;
+  --noticias: DM-Mono;
+  --subtextos: Sintony;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  line-height: normal; 
+  background: linear-gradient(
+    to bottom,
+    var(--color-amarillo),
+    var(--color-negro)
+  );
+  background-size: cover;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.logoatras {
+  background: none;
+}
+.logoatras:hover {
+  background: none;
+}
+.atras {
+  width: 50px;
+  position: relative;
+  bottom: 100px;
+  left: 20px;
+}
+
+.logo {
+  width: 120px;
+  margin: 10px auto;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transition: transform 0.8s;
+  border-radius: 50%;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}
+
+h1 {
+  font-size: 60px !important;
+  text-align: center;
+  font-family: var(--titulos);
+  text-shadow: 1px 1px 2px black, 0 0 25px var(--color-rojo),
+    0 0 5px var(--color-rojo);
+  -webkit-text-stroke: 2px var(--color-rojo);
+  color: var(--color-negro) !important;
+  filter: blur(3px);
+  transition: 0.3s all;
+  position: relative;
+  bottom: 50px;
+}
+
+h1:hover {
+  filter: blur(0);
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--color-negro);
+  text-align: center;
+  font-family: var(--titulos);
+  -webkit-text-stroke: 2px var(--color-rojo);
+  padding: 0;
+  margin: 0;
+  letter-spacing: 15px;
+  position: relative;
+  bottom: 65px;
+}
+
+/* Estilos del footer */
+footer {
+  background-color: var(--color-rojo);
+  color: #fff;
+  text-align: center;
+  opacity: 0.6;
+  width: 100%;
+  margin-top: auto;
+  margin: 0;
+}
+
+footer p {
+  font-size: 20px;
+  font-family: var(--titulos);
+  margin: 0 auto;
+}
+
+footer:hover {
+  background-color: var(--color-amarillo);
+  color: var(--color-negro);
+}
+
+footer:hover p:hover{
+  font-size: 20px;
+}

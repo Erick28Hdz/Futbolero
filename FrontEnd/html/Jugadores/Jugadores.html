@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/FrontEnd/css/Jugadores/Jugadores.css" />
+  <title>Jugador</title>
+</head>
+
+<body>
+  <header>
+    <section class="SeccionHeader">
+      <div class="BarraNavegacion">
+        <nav class="navbar bg-body-tertiary border-bottom fixed-top">
+          <div class="container-fluid">
+            <div class="NavFutbolero">
+              <a class="navbar-brand" href="#"
+                ><img
+                  class="logoIcono"
+                  src="/FrontEnd/img/iconos/icono futbolero.png"
+                  alt=""
+                />Futbolero</a
+              >
+              <p class="Slogan">Tú Ganador</p>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <img
+                  class="logoIcono"
+                  src="/FrontEnd/img/iconos/icono futbolero.png"
+                  alt=""
+                />
+                <h3 class="offcanvas-title" id="offcanvasNavbarLabel">
+                  Menú Futbolero
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <form class="d-flex mt-3" role="search">
+                  <div class="input-wrapper2">
+                    <button class="icon2">
+                      <img src="/FrontEnd/img/Iconos/buscar.png" alt="" />
+                    </button>
+                    <input
+                      type="text"
+                      name="text"
+                      class="input2"
+                      placeholder="Buscar"
+                    />
+                  </div>
+                </form>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/FrontEnd/html/Administradores/Administrador.html"
+                      ><img
+                        src="/FrontEnd/img/Iconos/human-resources.png"
+                        alt=""
+                      />Administrador</a
+                    >
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="/FrontEnd/html/Inicio_sesion/Inicio.html"
+                      ><img src="/FrontEnd/img/Iconos/house.png" alt="" />
+                      Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img
+                        src="/FrontEnd/img/Iconos/campeonato-de-futbol.png"
+                        alt=""
+                      />
+                      Fútbol profesional
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Nacionales/SelNacionales.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/world-cup.png"
+                            alt=""
+                          />Selecciones Nacionales</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Ligas/Ligas.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/competition.png"
+                            alt=""
+                          />
+                          Competiciones profesionales</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Clubes/Clubes.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/club-de-futbol.png"
+                            alt=""
+                          />Clubes profesionales de Fútbol</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Jugadores/Jugadores.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/equipo.png"
+                            alt=""
+                          />Plantillas profesionales</a
+                        >
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Fichajes/Fichajes.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/decision.png"
+                            alt=""
+                          />Mercado de fichajes</a
+                        >
+                      </li>
+                    </ul>
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img
+                        src="/FrontEnd/img/Iconos/content-creator.png"
+                        alt=""
+                      />
+                      Contenido
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Noticias/Noticias.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/noticias.png"
+                            alt=""
+                          />Notícias</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Calendario/Calendario.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/calendario.png"
+                            alt=""
+                          />Calendario de partidos</a
+                        >
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Foros/Foros.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/grupo.png"
+                            alt=""
+                          />Fóros</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Estadisticas/Estadisticas.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/estadisticas.png"
+                            alt=""
+                          />Estadísticas</a
+                        >
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img
+                        src="/FrontEnd/img/Iconos/contactanos.png"
+                        alt=""
+                      />
+                      Sobre nosotros
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Contacto/RedeSociales.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/mercadeo-social.png"
+                            alt=""
+                          />Contactenos</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Plataforma/Terminos_Condiciones.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/contrato.png"
+                            alt=""
+                          />Terminos y condiciones</a
+                        >
+                      </li>
+                    </ul>
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="/FrontEnd/html/Usuarios/Perfil.html"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      ><img src="/FrontEnd/img/Iconos/verified.png" alt="" />
+                      Preferencias
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/Perfil.html"
+                          ><img
+                            src="/FrontEnd/img/Iconos/perfil-usuario.png"
+                            alt=""
+                          />Mi perfil</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=1"
+                          ><img
+                            src="/FrontEnd/img/Iconos/administracion.png"
+                            alt=""
+                          />Editar perfil</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=2"
+                          ><img
+                            src="/FrontEnd/img/Iconos/administracion-del-dinero.png"
+                            alt=""
+                          />Actualizar membresia</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=3"
+                          ><img
+                            src="/FrontEnd/img/Iconos/titulo.png"
+                            alt=""
+                          />Personalizar perfil</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=4"
+                          ><img
+                            src="/FrontEnd/img/Iconos/satisfaccion.png"
+                            alt=""
+                          />Editar preferencias</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=5"
+                          ><img
+                            src="/FrontEnd/img/Iconos/alerta.png"
+                            alt=""
+                          />Configurar notificaciones</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="Cabecera">
+        <div class="Seccionbotonatras">
+          <a id="BotonAtras" href="/FrontEnd/html/Plataforma/Inicio.html"
+            ><img src="/FrontEnd/img/iconos/atras.png" alt="" class="atras"
+          /></a>
+          <a id="BotonAtras" href="/FrontEnd/html/Plataforma/Inicio.html"
+            ><img
+              src="/FrontEnd/img/iconos/adelante.png"
+              alt=""
+              class="atras"
+          /></a>
+        </div>
+        <div class="MarcaFutbolero">
+          <img
+            class="logo"
+            src="/FrontEnd/img/iconos/icono futbolero.png"
+            alt="Imagen 2"
+          />
+          <h1>Futbolero</h1>
+          <h2>Tú Ganador</h2>
+        </div>
+        <div class="SeccionPersonal">
+          <div class="BotonesPrincipales">
+            <div class="input-container">
+              <input
+                type="text"
+                name="text"
+                class="input"
+                placeholder="Escribe tú busqueda"
+              />
+              <img
+                class="icon"
+                src="/FrontEnd/img/Iconos/buscar.png"
+                alt=""
+              />
+            </div>
+            <input type="checkbox" id="checkboxInput" />
+            <label for="checkboxInput" class="toggleSwitch">
+              <div class="speaker">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.0"
+                  viewBox="0 0 75 75"
+                >
+                  <path
+                    d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
+                    style="
+                      stroke: #fff;
+                      stroke-width: 5;
+                      stroke-linejoin: round;
+                      fill: #fff;
+                    "
+                  ></path>
+                  <path
+                    d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
+                    style="
+                      fill: none;
+                      stroke: #fff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                    "
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="mute-speaker">
+                <svg
+                  version="1.0"
+                  viewBox="0 0 75 75"
+                  stroke="#fff"
+                  stroke-width="5"
+                >
+                  <path
+                    d="m39,14-17,15H6V48H22l17,15z"
+                    fill="#fff"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="m49,26 20,24m0-24-20,24"
+                    fill="#fff"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <form
+              action="/BackEnd/Plataforma/cerrar_sesion.php"
+              method="post"
+            >
+              <button type="submit" class="Btn">
+                <div class="sign">
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text">Cerrar sesión</div>
+              </button>
+            </form>
+          </div>
+          <div class="audio-player">
+            <div class="player-controls">
+              <div class="song-info">
+                <div class="song-title">Canción</div>
+                <p class="artist">Artista</p>
+              </div>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+              <div class="buttons">
+                <button class="skip-btn">
+                  <img src="/FrontEnd/img/Iconos/anterior.png" alt="" />
+                </button>
+                <button class="play-btn">
+                  <img src="/FrontEnd/img/Iconos/play.png" alt="" />
+                </button>
+                <button class="play-btn">
+                  <img src="/FrontEnd/img/Iconos/pause.png" alt="" />
+                </button>
+                <button class="pause-btn">
+                  <img src="/FrontEnd/img/Iconos/parar.png" alt="" />
+                </button>
+                <button class="volume-btn">
+                  <img src="/FrontEnd/img/Iconos/siguiente.png" alt="" />
+                </button>
+                <label class="slider">
+                  <input type="range" class="level" />
+                  <img
+                    class="volume"
+                    src="/FrontEnd/img/Iconos/altavoz.png"
+                    alt=""
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+   <!--Contenedor de describcion-->
+  <main>
+    <nav class="navegacionclubes"id="dropdownNacionalidades">
+      <div class="dropdown" >
+          <a
+              id="seleccionNacionalidades"
+              class="btn btn-secondary dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+          >
+              Nacionalidades
+          </a>
+          <ul id="MenuSelNac" class="dropdown-menu">
+              <!-- Contenido de la lista de nacionalidades se generará dinámicamente -->
+          </ul>
+      </div>
+  </nav>
+  <nav class="navegacionclubes" id="dropdownLigas">
+      <div class="dropdown" >
+          <a
+              id="seleccionLigas"
+              class="btn btn-secondary dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+          >
+              Liga profesional
+          </a>
+          <ul id="MenuLigas" class="dropdown-menu">
+              <!-- Contenido de la lista de ligas se generará dinámicamente -->
+          </ul>
+      </div>
+  </nav>
+    <nav class="navegacionclubes" id="dropdownClubes">
+      <div class="dropdown">
+        <a
+          class="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Clubes profesionales
+        </a>
+        <ul id="MenuClubes" class="dropdown-menu">
+        </ul>
+      </div>
+    </nav>
+    <nav class="navegacionclubes" id="dropdownJugadores">
+      <div class="dropdown">
+        <a
+          class="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Jugadores profesionales
+        </a>
+        <ul id="MenuJugadores" class="dropdown-menu">
+        </ul>
+      </div>
+    </nav>
+    <div class="container_1">
+      <!--Imagen-->
+      <section>
+      <div class="card">
+        <div class="sub-card category">
+          <span class="text_span">Nombre del jugador</span>
+          <img class="escudo"src="/FrontEnd/img/Iconos/icono futbolero.png" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512" alt="">
+        </div>
+        <div class="card_container">
+              <img src="/FrontEnd/img/Iconos/icono usuario.png" class="image" viewBox="0 0 24 24 " alt="">
+            </div>
+        <div class="sub-card named">
+          <span class="text_span">Equipo actual</span>
+        </div>
+      </div>
+    </section>
+      <!--Final imagen-->
+      <!--Nombre jugador y describcion-->
+      <section class="player-info">
+        <h2>Nombre del Jugador</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa deserunt ad illum nobis voluptatum quo sed! Recusandae, <br>
+           quibusdam maxime sit, eum molestiae adipisci sunt ipsum doloremque reiciendis harum, dolores modi?
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae consequuntur recusandae unde dignissimos quidem <br>
+            fuga magnam distinctio. Dolorem, eius perferendis! Nostrum alias quo minima magni sunt ad eum quam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa deserunt ad illum nobis voluptatum quo sed! Recusandae, <br>
+            quibusdam maxime sit, eum molestiae adipisci sunt ipsum doloremque reiciendis harum, dolores modi?
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae consequuntur recusandae unde dignissimos quidem <br>
+         fuga magnam distinctio. Dolorem, eius perferendis! Nostrum alias quo minima magni sunt ad eum quam.</p>
+      </section>
+
+      <!--Jugador-->
+      <section class="jugador">
+        <div class="equipo">
+          <img src="/FrontEnd/img/Iconos/adidas.png" alt="">
+          <span class="text_span">Nombre del equipo</span>
+        </div>
+        
+          <div class="datos_jugador">
+            <ul>
+                <li><strong>Dorsal:</strong> 10</li>
+                <li><strong>Posición:</strong> Delantero</li>                        
+            </ul>
+            <ul>
+                <li><strong>Fecha de Nacimiento:</strong> 01/01/1990</li>
+                <li><strong>Edad:</strong> 32 años</li>
+            </ul>
+            <ul>
+                <li><strong>Estatura:</strong> 1.80m</li>
+                <li><strong>Pie Hábil:</strong> Derecho</li>
+            </ul>
+            <ul>
+                <li><strong>Precio en el Mercado:</strong> $10,000,000.00</li>
+                <li><strong>Partidos Jugados:</strong> 200</li>
+            </ul>
+          </div>
+        <div class="pais">
+          <img src="/FrontEnd/img/Escudos/Escudos nacionales/Inglaterra.png" alt="">
+          <span class="text_span">Nombre del país</span>
+        </div>
+
+      </section>
+    </div>
+      <!--Final jugador-->
+    <!--Final nombre del jugador y describcion-->
+    <!--Final contenedor de describcion-->
+
+    <!--Contenedor estadisicas y trayectoria-->
+    <section class="container_2">
+    
+          <!--Estadisticas jugador-->
+          <div class="estadisticas">
+            <h2>Estadisticas</h2>
+            <ul>
+              <li><strong>Tiempo jugado:</strong>x</li>
+              <li><strong>Goles:</strong> x</li>
+              <li><strong>Asistencias:</strong> x</li>
+              <li><strong> Atajadas:</strong>x</li>
+              <li><strong>Tarjetas amarillas</strong>x</li>
+              <li><strong>Dobles amarillas:</strong>x</li>
+              <li><strong> Rojas directas:</strong>x</li>
+            </ul>
+          </div>
+          <!--Final estadisticas jugador-->
+
+          <!--Trayectoria jugador-->
+          <div class="trayectoria">
+            <h2>Trayectoria</h2>
+            <div class="loader">En proceso            
+            </div>
+          </div>
+          <!--Final trayectoria jugador-->
+
+    </section>
+    <!--Final contenedor estadisticas y trayectoria-->
+    <!--Contenedor destacado-->
+      <section class="container_3">
+
+      
+        <!--Posicion y mapa-->
+        <div>
+        <h2>Posicion</h2>
+        <div class="main_wrapper">
+          <div class="main">
+            <div class="antenna">
+              <div class="antenna_shadow"></div>
+              <div class="a1"></div>
+              <div class="a1d"></div>
+              <div class="a2"></div>
+              <div class="a2d"></div>
+              <div class="a_base"></div>
+            </div>
+            <div class="tv">
+              <div class="cruve">
+                <svg
+                  xml:space="preserve"
+                  viewBox="0 0 189.929 189.929"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  class="curve_svg"
+                >
+                  <path
+                    d="M70.343,70.343c-30.554,30.553-44.806,72.7-39.102,115.635l-29.738,3.951C-5.442,137.659,11.917,86.34,49.129,49.13
+                C86.34,11.918,137.664-5.445,189.928,1.502l-3.95,29.738C143.041,25.54,100.895,39.789,70.343,70.343z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="display_div">
+                <div class="screen_out">
+                  <div class="screen_out1">
+                    <div class="screen">
+                      <span class="notfound_text"> NOT FOUND</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lines">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+              </div>
+              <div class="buttons_div">
+                <div class="b1"><div></div></div>
+                <div class="b2"></div>
+                <div class="speakers">
+                  <div class="g1">
+                    <div class="g11"></div>
+                    <div class="g12"></div>
+                    <div class="g13"></div>
+                  </div>
+                  <div class="g"></div>
+                  <div class="g"></div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="base1"></div>
+              <div class="base2"></div>
+              <div class="base3"></div>
+            </div>
+          </div>
+          <div class="text_404">
+            <div class="text_4041">4</div>
+            <div class="text_4042">0</div>
+            <div class="text_4043">4</div>
+          </div>
+        </div>
+        
+        
+
+        </div>
+        <!--Final posicion y mapa-->
+        <!--Destacados y noticias-->
+        <div>
+        <h2>Destacados</h2>
+        
+
+        </div>
+        <!--Final destacados y noticias-->
+      <!--Final contenedor destacado-->
+     </section>
+  </main>
+   
+
+  <footer>
+    <div class="MainFooter">
+      <div class="InformacionFooter">
+        <div class="Asociados">
+          <h4>Nuestros Asociados</h4>
+          <section class="InfoAsociados">
+            <div class="ImgInformacion">
+              <img src="/FrontEnd/img/Asociados/ArteGestión 0 1.png" alt="" />
+              <span>ArteGestión</span>
+            </div>
+            <div class="ImgInformacion">
+              <img src="/FrontEnd/img/Asociados/logo gbo 2023.png" alt="" />
+              <span>Taller Gabriel</span>
+            </div>
+          </section>
+        </div>
+        <div>
+          <h4>Nuestas marcas</h4>
+        </div>
+      </div>
+
+      <div class="RedesyContacto">
+        <span><h4>Siguenos en nuestras redes</h4></span>
+        <div class="social-card">
+          <button class="BtnRedes">
+            <span class="ImgContainer">
+              <img src="/FrontEnd/img/Iconos/facebook-new.png" alt="" />
+            </span>
+            <span class="BG"></span>
+          </button>
+
+          <button class="BtnRedes">
+            <span class="ImgContainer">
+              <img src="/FrontEnd/img/Iconos/instagram-new.png" alt="" />
+            </span>
+            <span class="BG"></span>
+          </button>
+
+          <button class="BtnRedes">
+            <span class="ImgContainer">
+              <img src="/FrontEnd/img/Iconos/youtube-new.png" alt="" />
+            </span>
+            <span class="BG"></span>
+          </button>
+
+          <button class="BtnRedes">
+            <span class="ImgContainer">
+              <img src="/FrontEnd/img/Iconos/tik-tok-new.png" alt="" />
+            </span>
+            <span class="BG"></span>
+          </button>
+        </div>
+        <div class="newsletter-form">
+          <h5 class="heading">Estaremos en contacto contigo</h5>
+          <form class="formdatos">
+            <input
+              required=""
+              placeholder="Ingresa tú correo electronico"
+              name="email"
+              id="email"
+              type="email"
+            />
+            <input value="Contacto" type="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h4>Bogotá- Colombia &copy; 2024</h4>
+    </div>
+  </footer>
+  <script src="/FrontEnd/js/Jugadores/Jugadores.js"></script>
+  <script src="/FrontEnd/js/Clubes/Clubesdos.js"></script>
+    <script src="/FrontEnd/js/Ligas/Ligasdos.js"></script>
+    <script src="/FrontEnd/js/Nacionalidades/nacionalidadesdos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

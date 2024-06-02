@@ -1,0 +1,111 @@
+:root {
+    --color-negro: #000000;
+    --color-rojo: #841818;
+    --color-amarillo: #e0bb20;
+    --color-gris: #171717;
+    --titulos: Bungee;
+    --subtitulos: Rubik Mono One;
+    --contenidos: Suravaram;
+    --botones: Kanit;
+    --noticias: DM-Mono;
+    --subtextos: Sintony;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: var(--contenidos), sans-serif;
+    background-color: var(--color-gris);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--color-rojo);
+    color: var(--color-negro);
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+h1, h2 {
+    font-family: var(--titulos);
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--color-amarillo);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card form label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--color-negro);
+}
+
+.card form input[type="text"],
+.card form input[type="number"] {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-negro);
+    margin-right: 10px;
+}
+
+.card form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-rojo);
+    color: var(--color-negro);
+    cursor: pointer;
+}
+
+.card form input[type="submit"]:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+}
+
+footer {
+    background-color: var(--color-rojo);
+    color: var(--color-negro);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+}

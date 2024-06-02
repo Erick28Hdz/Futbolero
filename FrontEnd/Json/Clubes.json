@@ -1,0 +1,102 @@
+[
+  {
+    "ID": "1",
+    "Nombre": "Arsenal",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/arsenal.png"
+  },
+  {
+    "ID": "2",
+    "Nombre": "Aston Villa",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/astonvilla.png"
+  },
+  {
+    "ID": "3",
+    "Nombre": "Bournemouth",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/bournemouth.png"
+  },
+  {
+    "ID": "4",
+    "Nombre": "Brentford",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/brentford.png"
+  },
+  {
+    "ID": "5",
+    "Nombre": "Brighton & Hove Albion",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/brighton.png"
+  },
+  {
+    "ID": "6",
+    "Nombre": "Burnley",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/burnley.png"
+  },
+  {
+    "ID": "7",
+    "Nombre": "Chelsea",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/chelsea.png"
+  },
+  {
+    "ID": "8",
+    "Nombre": "Crystal Palace",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/crystalpalace.png"
+  },
+  {
+    "ID": "9",
+    "Nombre": "Everton",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/everton.png"
+  },
+  {
+    "ID": "10",
+    "Nombre": "Fulham",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/fulham.png"
+  },
+  {
+    "ID": "11",
+    "Nombre": "Liverpool",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/liverpool.png"
+  },
+  {
+    "ID": "12",
+    "Nombre": "Luton Town",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/luton_town.png"
+  },
+  {
+    "ID": "13",
+    "Nombre": "Manchester City",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/manchestercity.png"
+  },
+  {
+    "ID": "14",
+    "Nombre": "Manchester United",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/manchesterunited.png"
+  },
+  {
+    "ID": "15",
+    "Nombre": "Newcastle United",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/newcastle.png"
+  },
+  {
+    "ID": "16",
+    "Nombre": "Nottingham Forest",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/nottingham_forest.png"
+  },
+  {
+    "ID": "17",
+    "Nombre": "Sheffield United",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/sheffield.png"
+  },
+  {
+    "ID": "18",
+    "Nombre": "Tottenham Hotspur",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/tottenham.png"
+  },
+  {
+    "ID": "19",
+    "Nombre": "West Ham United",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/westham.png"
+  },
+  {
+    "ID": "20",
+    "Nombre": "Wolverhampton Wanderers",
+    "URL_imagen": "/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/wolves.png"
+  }
+]

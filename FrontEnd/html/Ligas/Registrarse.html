@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/FrontEnd/css/Registros/Registrarse.css" />
+    <title>Registro ligas</title>
+  </head>
+  <body>
+    <header>
+      <a href="/BackEnd/Selecciones/Selecciones.php"
+        ><img
+          class="atras"
+          src="/FrontEnd/img/iconos/atrás rojo.png"
+          alt="return"
+      /></a>
+      <img
+        class="logo"
+        src="/FrontEnd/img/iconos/icono futbolero.png"
+        alt="Imagen 2"
+      />
+
+      <h1>Futbolero</h1>
+      <h2>Tú Ganador</h2>
+    </header>
+    <main>
+      <h3>Registrar nueva liga</h3>
+      <div class="card">
+        <div class="card2">
+          <form
+            class="form"
+            action="/BackEnd/Ligas/Registrar.php"
+            method="post"
+          >
+            <p class="title">Registrar nueva liga profesional</p>
+            <p class="message">
+              Registra una nueva liga profesional para modificar la plataforma.
+            </p>
+            <label for="Nombre">
+              <input
+                class="input"
+                type="text"
+                name="Nombre"
+                id="Nombre"
+                required
+              />
+              <span>Nombre:</span>
+            </label>
+            <label for="NumeroEquipos">
+              <input
+                class="input"
+                type="number"
+                name="NumeroEquipos"
+                id="NumeroEquipos"
+                required
+              />
+              <span>Numero de equipos:</span>
+            </label>
+            <label for="FKIDClubes">
+              <input
+                class="input"
+                type="number"
+                name="FKIDClubes"
+                id="FKIDClubes"
+              />
+              <span>ID Clubes:</span>
+            </label>
+            <label for="FKIDNacionalidades">
+              <input
+                class="input"
+                type="number"
+                name="FKIDNacionalidades"
+                id="FKIDNacionalidades"
+              />
+              <span>ID Nacionalidad:</span>
+            </label>
+            <label for="FKIDTemporada">
+              <input
+                class="input"
+                type="number"
+                name="FKIDTemporada"
+                id="FKIDTemporada"
+              />
+              <span>ID Temporada:</span>
+            </label>
+            <label for="FKIDPartidos">
+              <input
+                class="input"
+                type="number"
+                name="FKIDPartidos"
+                id="FKIDPartidos"
+              />
+              <span>ID Partidos:</span>
+            </label>
+            <!-- Botón de envío -->
+            <button class="submit" type="submit" value="Registrar">
+              Registrar
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>2023</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

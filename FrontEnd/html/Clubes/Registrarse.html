@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/FrontEnd/css/Registros/Registrarse.css" />
+    <title>Registro ligas</title>
+  </head>
+  <body>
+    <header>
+      <a href="/BackEnd/Clubes/Clubes.php"
+        ><img
+          class="atras"
+          src="/FrontEnd/img/iconos/atrás rojo.png"
+          alt="return"
+      /></a>
+      <img
+        class="logo"
+        src="/FrontEnd/img/iconos/icono futbolero.png"
+        alt="Imagen 2"
+      />
+
+      <h1>Futbolero</h1>
+      <h2>Tú Ganador</h2>
+    </header>
+    <main>
+      <h3>Registrar nuevo club profesional</h3>
+      <div class="card">
+        <div class="card2">
+          <form class="form" action="/BackEnd/Clubes/Registrar.php" method="post">
+            <p class="title">Registrar nuevo club profesional</p>
+            <p class="message">Registra un nuevo club profesional para modificar la plataforma.</p>
+            <label for="Nombre">
+                <input class="input" type="text" name="Nombre" id="Nombre" required />
+                <span>Nombre:</span>
+            </label>
+            <label for="Ciudad">
+                <input class="input" type="text" name="Ciudad" id="Ciudad" required />
+                <span>Ciudad:</span>
+            </label>
+            <label for="Direccion">
+                <input class="input" type="text" name="Direccion" id="Direccion" />
+                <span>Dirección:</span>
+            </label>
+            <label for="Estadio">
+                <input class="input" type="text" name="Estadio" id="Estadio" />
+                <span>Estadio:</span>
+            </label>
+            <label for="Capacidad">
+                <input class="input" type="number" name="Capacidad" id="Capacidad" />
+                <span>Capacidad:</span>
+            </label>
+            <label for="FKIDPatrocinadorPrincipal">
+                <input class="input" type="number" name="FKIDPatrocinadorPrincipal" id="FKIDPatrocinadorPrincipal" />
+                <span>ID Patrocinador Principal:</span>
+            </label>
+            <label for="FKIDPatrocinadorUniforme">
+                <input class="input" type="number" name="FKIDPatrocinadorUniforme" id="FKIDPatrocinadorUniforme" />
+                <span>ID Patrocinador Uniforme:</span>
+            </label>
+            <label for="FKIDPatrocinadorPecho">
+                <input class="input" type="number" name="FKIDPatrocinadorPecho" id="FKIDPatrocinadorPecho" />
+                <span>ID Patrocinador Pecho:</span>
+            </label>
+            <label for="FKIDPatrocinadorManga">
+                <input class="input" type="number" name="FKIDPatrocinadorManga" id="FKIDPatrocinadorManga" />
+                <span>ID Patrocinador Manga:</span>
+            </label>
+            <label for="FKIDPatrocinadorEspalda">
+                <input class="input" type="number" name="FKIDPatrocinadorEspalda" id="FKIDPatrocinadorEspalda" />
+                <span>ID Patrocinador Espalda:</span>
+            </label>
+            <label for="FKIDPlantilla">
+                <input class="input" type="number" name="FKIDPlantilla" id="FKIDPlantilla" />
+                <span>ID Plantilla:</span>
+            </label>
+            <label for="FKIDNacionalidades">
+                <input class="input" type="number" name="FKIDNacionalidades" id="FKIDNacionalidades" />
+                <span>ID Nacionalidades:</span>
+            </label>
+            <label for="FKIDLigas">
+                <input class="input" type="number" name="FKIDLigas" id="FKIDLigas" />
+                <span>ID Ligas:</span>
+            </label>
+            <label for="FKIDFichajes">
+                <input class="input" type="number" name="FKIDFichajes" id="FKIDFichajes" />
+                <span>ID Fichajes:</span>
+            </label>
+            <label for="FKIDTemporadas">
+                <input class="input" type="number" name="FKIDTemporadas" id="FKIDTemporadas" />
+                <span>ID Temporadas:</span>
+            </label>
+            <label for="FKIDPartido">
+                <input class="input" type="number" name="FKIDPartido" id="FKIDPartido" />
+                <span>ID Partido:</span>
+            </label>
+            <label for="FKIDEstadisticas">
+                <input class="input" type="number" name="FKIDEstadisticas" id="FKIDEstadisticas" />
+                <span>ID Estadisticas:</span>
+            </label>
+            <!-- Botón de envío -->
+            <button class="submit" type="submit" value="Registrar">Registrar</button>
+        </form>
+        
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>2023</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Inicio futbolero</title>
+    <link href="/FrontEnd/css/Inicio/Inicio.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <section class="SeccionHeader">
+        <div class="BarraNavegacion">
+          <nav class="navbar bg-body-tertiary border-bottom fixed-top">
+            <div class="container-fluid">
+              <div class="NavFutbolero">
+                <a class="navbar-brand" href="#"
+                  ><img
+                    class="logoIcono"
+                    src="/FrontEnd/img/iconos/icono futbolero.png"
+                    alt=""
+                  />Futbolero</a
+                >
+                <p class="Slogan">Tú Ganador</p>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-start"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-header">
+                  <img
+                    class="logoIcono"
+                    src="/FrontEnd/img/iconos/icono futbolero.png"
+                    alt=""
+                  />
+                  <h3 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    Menú Futbolero
+                  </h3>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form class="d-flex mt-3" role="search">
+                    <div class="input-wrapper2">
+                      <button class="icon2">
+                        <img src="/FrontEnd/img/Iconos/buscar.png" alt="" />
+                      </button>
+                      <input
+                        type="text"
+                        name="text"
+                        class="input2"
+                        placeholder="Buscar"
+                      />
+                    </div>
+                  </form>
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="/FrontEnd/html/Administradores/Administrador.html"
+                        ><img
+                          src="/FrontEnd/img/Iconos/human-resources.png"
+                          alt=""
+                        />Administrador</a
+                      >
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="/FrontEnd/html/Inicio_sesion/Inicio.html"
+                        ><img src="/FrontEnd/img/Iconos/house.png" alt="" />
+                        Inicio</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img
+                          src="/FrontEnd/img/Iconos/campeonato-de-futbol.png"
+                          alt=""
+                        />
+                        Fútbol profesional
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Nacionales/SelNacionales.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/world-cup.png"
+                              alt=""
+                            />Selecciones Nacionales</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Ligas/Ligas.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/competition.png"
+                              alt=""
+                            />
+                            Competiciones profesionales</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Clubes/Clubes.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/club-de-futbol.png"
+                              alt=""
+                            />Clubes profesionales de Fútbol</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Jugadores/Jugadores.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/equipo.png"
+                              alt=""
+                            />Plantillas profesionales</a
+                          >
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Fichajes/Fichajes.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/decision.png"
+                              alt=""
+                            />Mercado de fichajes</a
+                          >
+                        </li>
+                      </ul>
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img
+                          src="/FrontEnd/img/Iconos/content-creator.png"
+                          alt=""
+                        />
+                        Contenido
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Noticias/Noticias.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/noticias.png"
+                              alt=""
+                            />Notícias</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Calendario/Calendario.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/calendario.png"
+                              alt=""
+                            />Calendario de partidos</a
+                          >
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Foros/Foros.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/grupo.png"
+                              alt=""
+                            />Fóros</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Estadisticas/Estadisticas.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/estadisticas.png"
+                              alt=""
+                            />Estadísticas</a
+                          >
+                        </li>
+                        <li></li>
+                      </ul>
+
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img
+                          src="/FrontEnd/img/Iconos/contactanos.png"
+                          alt=""
+                        />
+                        Sobre nosotros
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Contacto/Sobrenosotros.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/mercadeo-social.png"
+                              alt=""
+                            />Contactenos</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Plataforma/Terminos_Condiciones.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/contrato.png"
+                              alt=""
+                            />Terminos y condiciones</a
+                          >
+                        </li>
+                      </ul>
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="/FrontEnd/html/Usuarios/Perfil.html"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img src="/FrontEnd/img/Iconos/verified.png" alt="" />
+                        Preferencias
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/Perfil.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/perfil-usuario.png"
+                              alt=""
+                            />Mi perfil</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=1"
+                            ><img
+                              src="/FrontEnd/img/Iconos/administracion.png"
+                              alt=""
+                            />Editar perfil</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=2"
+                            ><img
+                              src="/FrontEnd/img/Iconos/administracion-del-dinero.png"
+                              alt=""
+                            />Actualizar membresia</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=3"
+                            ><img
+                              src="/FrontEnd/img/Iconos/titulo.png"
+                              alt=""
+                            />Personalizar perfil</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=4"
+                            ><img
+                              src="/FrontEnd/img/Iconos/satisfaccion.png"
+                              alt=""
+                            />Editar preferencias</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=5"
+                            ><img
+                              src="/FrontEnd/img/Iconos/alerta.png"
+                              alt=""
+                            />Configurar notificaciones</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="Cabecera">
+          <div class="Seccionbotonatras">
+            <a id="BotonAtras" href="/FrontEnd/html/Plataforma/Inicio.html"
+              ><img src="/FrontEnd/img/iconos/atras.png" alt="" class="atras"
+            /></a>
+            <a id="BotonAtras" href="/FrontEnd/html/Plataforma/Inicio.html"
+              ><img
+                src="/FrontEnd/img/iconos/adelante.png"
+                alt=""
+                class="atras"
+            /></a>
+          </div>
+          <div class="MarcaFutbolero">
+            <img
+              class="logo"
+              src="/FrontEnd/img/iconos/icono futbolero.png"
+              alt="Imagen 2"
+            />
+            <h1>Futbolero</h1>
+            <h2>Tú Ganador</h2>
+          </div>
+          <div class="SeccionPersonal">
+            <div class="BotonesPrincipales">
+              <div class="input-container">
+                <input
+                  type="text"
+                  name="text"
+                  class="input"
+                  placeholder="Escribe tú busqueda"
+                />
+                <img
+                  class="icon"
+                  src="/FrontEnd/img/Iconos/buscar.png"
+                  alt=""
+                />
+              </div>
+              <input type="checkbox" id="checkboxInput" />
+              <label for="checkboxInput" class="toggleSwitch">
+                <div class="speaker">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.0"
+                    viewBox="0 0 75 75"
+                  >
+                    <path
+                      d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
+                      style="
+                        stroke: #fff;
+                        stroke-width: 5;
+                        stroke-linejoin: round;
+                        fill: #fff;
+                      "
+                    ></path>
+                    <path
+                      d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
+                      style="
+                        fill: none;
+                        stroke: #fff;
+                        stroke-width: 5;
+                        stroke-linecap: round;
+                      "
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="mute-speaker">
+                  <svg
+                    version="1.0"
+                    viewBox="0 0 75 75"
+                    stroke="#fff"
+                    stroke-width="5"
+                  >
+                    <path
+                      d="m39,14-17,15H6V48H22l17,15z"
+                      fill="#fff"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="m49,26 20,24m0-24-20,24"
+                      fill="#fff"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+              </label>
+              <form
+                action="/BackEnd/Plataforma/cerrar_sesion.php"
+                method="post"
+              >
+                <button type="submit" class="Btn">
+                  <div class="sign">
+                    <svg viewBox="0 0 512 512">
+                      <path
+                        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text">Cerrar sesión</div>
+                </button>
+              </form>
+            </div>
+            <div class="audio-player">
+              <div class="player-controls">
+                <div class="song-info">
+                  <div class="song-title">Canción</div>
+                  <p class="artist">Artista</p>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress"></div>
+                </div>
+                <div class="buttons">
+                  <button class="skip-btn">
+                    <img src="/FrontEnd/img/Iconos/anterior.png" alt="" />
+                  </button>
+                  <button class="play-btn">
+                    <img src="/FrontEnd/img/Iconos/play.png" alt="" />
+                  </button>
+                  <button class="play-btn">
+                    <img src="/FrontEnd/img/Iconos/pause.png" alt="" />
+                  </button>
+                  <button class="pause-btn">
+                    <img src="/FrontEnd/img/Iconos/parar.png" alt="" />
+                  </button>
+                  <button class="volume-btn">
+                    <img src="/FrontEnd/img/Iconos/siguiente.png" alt="" />
+                  </button>
+                  <label class="slider">
+                    <input type="range" class="level" />
+                    <img
+                      class="volume"
+                      src="/FrontEnd/img/Iconos/altavoz.png"
+                      alt=""
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!--Seccion NOTICIAS-->
+      <section class="seccionoticias">
+        <div
+          id="carouselnoticiasCaptions"
+          class="carousel carouselnotices slide"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselnoticiasCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselnoticiasCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselnoticiasCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div id="noticias1" class="noticiascompleta"></div>
+
+              <div class="carousel-captionotice d-none d-md-block">
+                <h4>First slide label</h4>
+                <p class="parrafonoticia">
+                  Some representative placeholder content for the first slide.
+                </p>
+                <hr />
+                <p class="fuentenoticia"></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div id="noticias2" class="noticiascompleta"></div>
+              <div class="carousel-captionotice d-none d-md-block">
+                <h4>Second slide label</h4>
+                <p class="parrafonoticia">
+                  Some representative placeholder content for the second slide.
+                </p>
+                <p class="fuentenoticia"></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div id="noticias3" class="noticiascompleta"></div>
+              <div class="carousel-captionotice d-none d-md-block">
+                <h4>Third slide label</h4>
+                <p class="parrafonoticia">
+                  Some representative placeholder content for the third slide.
+                </p>
+                <p class="fuentenoticia"></p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselnoticiasCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselnoticiasCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!--FINAL SECCION NOTICIAS-->
+      <!--Inicio sección de competiciones -->
+      <section class="seccionligas">
+        <div
+          id="carouselnacionesCaptions"
+          class="carousel carouselselecciones slide"
+        >
+          <div class="tituloscarousel">
+            <h4>Selecciones nacionales</h4>
+          </div>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselnacionesCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselnacionesCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselnacionesCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="imagenpais"
+                src="/FrontEnd/img/BanderasNacionales/Inglaterra.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Inglaterra</h3>
+                <img
+                  class="imagensele"
+                  src="/FrontEnd/img/Escudos/Escudos nacionales/inglaterra.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="imagenpais"
+                src="/FrontEnd/img/BanderasNacionales/colombia.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Colombia</h3>
+                <img
+                  class="imagensele"
+                  src="/FrontEnd/img/Escudos/Escudos nacionales/colombia.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="imagenpais"
+                src="/FrontEnd/img/BanderasNacionales/argentina.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Argentina</h3>
+                <img
+                  class="imagensele"
+                  src="/FrontEnd/img/Escudos/Escudos nacionales/argentina.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselnacionesCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselnacionesCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div
+          id="carouselligaCaptions"
+          class="carousel carouselselecciones slide"
+        >
+          <div class="tituloscarousel">
+            <h4>Ligas profesionales</h4>
+          </div>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselligaCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselligaCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselligaCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="imagenpais"
+                src="/FrontEnd/img/BanderasNacionales/Inglaterra.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption internoselec d-none d-md-block">
+                <img
+                  class="imagenliga"
+                  src="/FrontEnd/img/Escudos/Escudos Ligas/Inglaterra/logo-Premier-League.png"
+                  alt=""
+                />
+                <h3>Premier League</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="imagenpais"
+                src="/FrontEnd/img/BanderasNacionales/Inglaterra.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption internoselec d-none d-md-block">
+                <img
+                  class="imagenliga"
+                  src="/FrontEnd/img/Escudos/Escudos Ligas/Inglaterra/EFL_Championship.png"
+                  alt=""
+                />
+                <h3>EFL Championship</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="imagenpais"
+                src="/FrontEnd/img/BanderasNacionales/Inglaterra.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption internoselec d-none d-md-block">
+                <img
+                  class="imagenliga"
+                  src="/FrontEnd/img/Escudos/Escudos Ligas/Inglaterra/EFL_League_One.png"
+                  alt=""
+                />
+                <h3>EFL League One</h3>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselligaCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselligaCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- FINAL SECCIÓN DE LIGAS -->
+      <hr />
+  <!--==============================
+	=            calendario            =
+	===============================-->
+      <section class="calendarioypartidos">
+        <div class="secciondepartidos">
+          <div
+            class="nav flex-column nav-pills me-3 scrollfechas"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <ul class="listabotonesfechas" id="nav-pills-list">
+              <!-- Los botones de perfil se generarán dinámicamente aquí -->
+            </ul>
+          </div>
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="default-tab">
+              <!-- Contenido de la tabla predeterminada -->
+            </div>
+            <!-- El contenido de las pestañas se generará dinámicamente aquí -->
+          </div>
+        </div>
+      </section>
+  <!--==============================
+	=            Clubes            =
+	===============================-->
+      <section class="seccionclubesyjugadores">
+        <div class="clubesyjugadores text-center">
+          <div class="botonesheaderclubes">
+            <div class="tituloclubesyjugadores">
+              <h5 class="card-title">Club y jugadores</h5>
+            </div>
+            <div class="container cajasclub">
+              <div class="cajasclubes">
+                <p class="titulocajas">
+                  Arsenal
+                </p>
+              </div>
+              <div class="cajasclubes">
+                <p class="titulocajas">
+                  Aston villa
+                </p>
+              </div>
+              <div class="cajasclubes">
+                <p class="titulocajas">
+                  Chelsea
+                </p>
+              </div>
+            
+              <div class="cajasclubes">
+                <p class="titulocajas">
+                  Liverpool
+                </p>
+              </div>
+              <div class="cajasclubes">
+                <p class="titulocajas">
+                  Liverpool
+                </p>
+              </div>
+              <div class="cajasclubes">
+                <p class="titulocajas">
+                  Liverpool
+                </p>
+              </div>
+              <div class="cajasclubes">
+                <p class="titulocajas">
+                  Liverpool
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr>  
+          <div class="seccionclubyjugadores">
+            <section class="perfilclub">
+              <div class="tarjetaperfilclub" style="width: 18rem">
+                <img
+                  src="/FrontEnd/img/Escudos/Escudos clubes/Inglaterra I/chelsea.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="divperfilclub">
+                  <h4 class="tituloperfilclub">Chelsea Football Club</h4>
+                  <h3>(2023-2024)</h3>
+                  <p class="card-text">
+                    Estadio: Stamford Bridge <br> Capacidad: 41.841 <br>Origen: Londres, Inglaterra
+                  </p>
+                  <hr>
+                  <p>Fundación: 1905 <br> Apodo: The Blues <br>Propietario: Roman Abramovich <br> Liga actual: Premier League <br>Campeonatos: 6 Premier League, 2 Champions League, 8 FA Cup, 5 League Cup
+                  </p>
+                  <p>Sitio web oficial: <br> <a href="#" class="card-link"> https://www.chelseafc.com/en</a></p>
+                  <p>Plantilla en Transfermarkt: <br> <a href="#" class="card-link"> https://www.transfermarkt.com/fc-chelsea/startseite/verein/631</a></p>
+                </div>
+              </div>
+              <article class="tarjetajugador">
+                <div class="card-img">
+                <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/Thomas Tuchel.jpg" alt="">
+                </div>
+                <div class="project-info">
+                  <div class="flex">
+                    <span class="tag">Director Técnico</span>
+                    <h3 class="project-title">Thomas Tuchel</h3>
+                  </div>
+                  <span class="lighter"
+                    >Edad: 50 años <br>
+                    Nacionalidad: Alemana <hr>
+                    Títulos ganados con el Chelsea FC: <br>
+                    UEFA Champions League (2021)
+                    Supercopa de la UEFA (2021)
+                    Copa Mundial de Clubes de la FIFA (2021)</span
+                  >
+                </div>
+              </article>
+            </section>
+            <section class="jugadoresclubes">
+              <div class="dropdown equiposlista">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Posiciones de jugadores
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Delantanteros</a></li>
+                  <li><a class="dropdown-item" href="#">Centro medios</a></li>
+                  <li><a class="dropdown-item" href="#">Defensas</a></li>
+                  <li><a class="dropdown-item" href="#">Arqueros</a></li>
+                  <li><a class="dropdown-item" href="#">Cuerpo tecnico</a></li>
+                </ul>
+              </div>
+              <div class="tarjetasjugadores row row-cols-1 row-cols-md-3 g-4">
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/Raheem Sterling.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Delantero</span>
+                      <h3 class="project-title">Raheem Sterling</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 27 años <br>
+                      Nacionalidad: Inglesa <br>
+                      Pie: Derecho <br>
+                      Altura: 1.70 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/Kai Havertz.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Delantero</span>
+                      <h3 class="project-title">Kai Havertz</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 23 años <br>
+                      Nacionalidad: Alemana <br>
+                      Pie: Izquierdo <br>
+                      Altura: 1.88 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/Mason Mount.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Centrocampista</span>
+                      <h3 class="project-title">Mason Mount</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 23 años <br>
+                      Nacionalidad: Inglesa <br>
+                      Pie: Derecho <br>
+                      Altura: 1.80 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/Jorginho.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Centrocampista</span>
+                      <h3 class="project-title">Jorginho</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 30 años <br>
+                      Nacionalidad: Italiana <br>
+                      Pie: Derecho <br>
+                      Altura: 1.75 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/N'GoloKanté.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Centrocampista</span>
+                      <h3 class="project-title">N'Golo Kanté</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 31 años <br>
+                      Nacionalidad: Francesa <br>
+                      Pie: Derecho <br>
+                      Altura: 1.68 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/BenChilwell.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Defensa</span>
+                      <h3 class="project-title">Ben Chilwell</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 25 años <br>
+                      Nacionalidad: Inglesa <br>
+                      Pie: Izquierdo <br>
+                      Altura: 1.78 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/AntonioRudiger" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Defensa</span>
+                      <h3 class="project-title">Antonio Rüdiger</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 29 años <br>
+                      Nacionalidad: Alemana <br>
+                      Pie: Izquierdo <br>
+                      Altura: 1.90 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/Reece James.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Defensa</span>
+                      <h3 class="project-title">Reece James</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 28 años <br>
+                      Nacionalidad: inglesa <br>
+                      Pie: Derecho <br>
+                      Altura: 1.85 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/CesarAzpilicueta.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Defensa</span>
+                      <h3 class="project-title">César Azpilicueta</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 33 años <br>
+                      Nacionalidad: Española <br>
+                      Pie: Derecho <br>
+                      Altura: 1.78 m</span
+                    >
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/thiagosilva.jpeg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Defensa</span>
+                      <h3 class="project-title">Thiago Silva</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 38 años <br>
+                      Nacionalidad: Brasileña <br>
+                      Pie: Derecho <br>
+                      Altura: 1.73 m
+                    </span>
+                  </div>
+                </article>
+                <article class="tarjetajugador">
+                  <div class="card-img">
+                  <img src="/FrontEnd/img/Jugadores/Inglaterra/Chelsea/Kepa-Arrizabalaga.jpg" alt="">
+                  </div>
+                  <div class="project-info">
+                    <div class="flex">
+                      <span class="tag">Portero</span>
+                      <h3 class="project-title">Kepa Arrizabalaga</h3>
+                    </div>
+                    <span class="lighter"
+                      >Edad: 28 años <br>
+                      Nacionalidad: Española <br>
+                      Pie: Derecho <br>
+                      Altura: 1.89 m</span
+                    >
+                  </div>
+                </article> 
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+  <!--==============================
+	=            Foros              =
+	===============================-->
+    <div class="seccionforos">
+      <select class="scrollforos form-select" aria-label="Default select example">
+        <option selected>Mejores debates de la semana</option>
+        <option value="1">Por notícias</option>
+        <option value="2">Por contenido</option>
+        <option value="3">Por estadisticas</option>
+      </select>
+      <section class="seleccionforo">
+        <div class="tarjetaforo">
+          <div class="cabeceraforo">
+            <div class="tituloforo">
+              <h4>
+                ¡España 3-3 Brasil! Espectacular partido con golazo de Endrick, futuro jugador del Real Madrid, en el Bernabéu
+              </h4>
+              <p class="usuarioforo">Usuario: John Doe</p>
+            </div>
+             <img class="imageusuarioforo" src="/FrontEnd/img/Iconos/perfil-usuario.png" alt="">
+          </div>
+            <p class="description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
+              provident a, ipsa maiores deleniti consectetur nobis et eaque.
+            </p>
+          <dl class="post-info">
+            <div class="cr">
+              <dt class="dt">Publicado</dt>
+              <dd class="dd">12 junio 2024</dd>
+            </div>
+            <div class="cr">
+              <dt class="dt">Escrito hace:</dt>
+              <dd class="dd">23 Horas</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="tarjetaforo">
+          <div class="cabeceraforo">
+            <div class="tituloforo">
+              <h4>
+                ¡España 3-3 Brasil! Espectacular partido con golazo de Endrick, futuro jugador del Real Madrid, en el Bernabéu
+              </h4>
+              <p class="usuarioforo">Usuario: John Doe</p>
+            </div>
+             <img class="imageusuarioforo" src="/FrontEnd/img/Iconos/perfil-usuario.png" alt="">
+          </div>
+            <p class="description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
+              provident a, ipsa maiores deleniti consectetur nobis et eaque.
+            </p>
+          <dl class="post-info">
+            <div class="cr">
+              <dt class="dt">Publicado</dt>
+              <dd class="dd">12 junio 2024</dd>
+            </div>
+            <div class="cr">
+              <dt class="dt">Escrito hace:</dt>
+              <dd class="dd">23 Horas</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="tarjetaforo">
+          <div class="cabeceraforo">
+            <div class="tituloforo">
+              <h4>
+                ¡España 3-3 Brasil! Espectacular partido con golazo de Endrick, futuro jugador del Real Madrid, en el Bernabéu
+              </h4>
+              <p class="usuarioforo">Usuario: John Doe</p>
+            </div>
+             <img class="imageusuarioforo" src="/FrontEnd/img/Iconos/perfil-usuario.png" alt="">
+          </div>
+            <p class="description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
+              provident a, ipsa maiores deleniti consectetur nobis et eaque.
+            </p>
+          <dl class="post-info">
+            <div class="cr">
+              <dt class="dt">Publicado</dt>
+              <dd class="dd">12 junio 2024</dd>
+            </div>
+            <div class="cr">
+              <dt class="dt">Escrito hace:</dt>
+              <dd class="dd">23 Horas</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </div>
+  <!--==============================
+	=            Estadisticas       =
+	===============================-->
+
+      
+      <section class="seccionestadisticas">
+        <h4>Estadisticas generales</h4>
+        <div class="bloquestadisticas">
+          <div class="estadisticlub">
+            <h4>Club Arsenal F.C</h4>
+            <canvas id="estaclub"></canvas>
+          </div>
+          <div class="estadisticlub">
+            <h4>Reiss Nelson</h4>
+            <canvas id="estajuga"></canvas>
+          </div>
+          <div class="estadisticlub">
+            <h4>Apuestas deportivas</h4>
+            <canvas id="estapues"></canvas>
+          </div>
+        </div>
+      </section>
+
+  <!--==============================
+	= Actualizaciones de la página   =
+	===============================-->
+
+      <section class="actualizacionespages">
+        <div class="actualizacionesplataforma">
+          <h4>Últimas actualizaciones de nuestra plataforma</h4>
+          <ol class="grupoactualizaciones list-group list-group-numbered">
+            <li class="list-group-item">Página de partidos abierta</li>
+            <li class="list-group-item">Desplegable con certificado HTTPS</li>
+            <li class="list-group-item">Hipervinculación al 50%</li>
+            <li class="list-group-item">Mejoras en textos</li>
+            <li class="list-group-item">Conexión real con partidos</li>
+            <li class="list-group-item">Clubes desplegables</li>
+          </ol>
+        </div>
+        <div class="actualizacionescontenido">
+          <h4>Últimas actualizaciones de nuestro contenido</h4>
+          <ol class="grupoactualizaciones list-group list-group-numbered">
+            <li class="list-group-item">Actualización en logos</li>
+            <li class="list-group-item">Edición de perfil actualizado</li>
+            <li class="list-group-item">Contenido colorido y mejorado</li>
+            <li class="list-group-item">Enlaces reales y estables</li>
+            <li class="list-group-item">Página de inicio terminada</li>
+            <li class="list-group-item">Páginas en 50% terminadas</li>
+          </ol>
+        </div>
+      </section>
+
+  <!--===================================
+	=            MEMBRESIAS           =
+	====================================-->
+
+      <section class="membresias">
+        <div class="container cards">
+          <div class="card_box1">
+            <div class="cabeceramiembros">
+              <p class="titulomiembros">
+                ¡Hazte miembro! <br />
+                Básico
+              </p>
+              <div class="price-container">
+                <p>$</p>
+                <p>0.00</p>
+                <p>/mes</p>
+              </div>
+            </div>
+            <div class="listasmiembro">
+              <ul class="listamiembros">
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Perfil personalizable</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Todas las ligas</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Todas las plantillas</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/malo.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Foros y debates</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/malo.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Analísis y estadísticas</p>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="button-container">
+              <div class="button-container">
+                <form action="/BackEnd/Pagos/Pagos.php" method="POST">
+                  <input type="hidden" name="plan" value="Básico" />
+                  <input type="hidden" name="price" value="0.00" />
+                  <button type="submit" class="buttonmember">
+                    Suscribirse
+                  </button>
+                </form>
+              </div>
+            </div>
+            <span></span>
+          </div>
+        </div>
+        <div class="container cards">
+          <div class="card_box2">
+            <div class="cabeceramiembros">
+              <p class="titulomiembros">
+                ¡Hazte miembro! <br />
+                Estrella
+              </p>
+              <div class="price-container">
+                <p>$</p>
+                <p>10.00</p>
+                <p>/mes</p>
+              </div>
+            </div>
+            <div class="listasmiembro">
+              <ul class="listamiembros">
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Perfil personalizable</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Todas las ligas</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Todas las plantillas</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Foros y debates</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/malo.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Analísis y estadísticas</p>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="button-container">
+              <div class="button-container">
+                <form action="/BackEnd/Pagos/Pagos.php" method="POST">
+                  <input type="hidden" name="plan" value="Estrella" />
+                  <input type="hidden" name="price" value="10.00" />
+                  <button type="submit" class="buttonmember">
+                    Suscribirse
+                  </button>
+                </form>
+              </div>
+            </div>
+            <span></span>
+          </div>
+        </div>
+        <div class="container cards">
+          <div class="card_box3">
+            <div class="cabeceramiembros">
+              <p class="titulomiembros">
+                ¡Hazte miembro! <br />
+                Premium
+              </p>
+              <div class="price-container">
+                <p>$</p>
+                <p>20.00</p>
+                <p>/mes</p>
+              </div>
+            </div>
+            <div class="listasmiembro">
+              <ul class="listamiembros">
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Perfil personalizable</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Todas las ligas</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Todas las plantillas</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Foros y debates</p>
+                  </li>
+                </div>
+                <div class="imgtarjetasmiembros">
+                  <img
+                    class="img-symbol"
+                    src="/FrontEnd/img/iconos/bueno.png"
+                    alt=""
+                  />
+                  <li class="beneficios">
+                    <p>Analísis y estadísticas</p>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="button-container">
+              <form action="/BackEnd/Pagos/Pagos.php" method="POST">
+                <input type="hidden" name="plan" value="Premium" />
+                <input type="hidden" name="price" value="20.00" />
+                <button type="submit" class="buttonmember">Suscribirse</button>
+              </form>
+            </div>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+  <!--==============================
+	=            Sponsors            =
+	===============================-->
+
+      <section></section>
+
+  <!--============================
+	=            Footer            =
+	=============================-->
+
+      <!-- Subfooter -->
+    </main>
+
+    <footer>
+      <div class="MainFooter">
+        <div class="InformacionFooter">
+          <div class="Asociados">
+            <h4>Nuestros Asociados</h4>
+            <section class="InfoAsociados">
+              <div class="ImgInformacion">
+                <img src="/FrontEnd/img/Asociados/ArteGestión 0 1.png" alt="" />
+                <span>ArteGestión</span>
+              </div>
+              <div class="ImgInformacion">
+                <img src="/FrontEnd/img/Asociados/logo gbo 2023.png" alt="" />
+                <span>Taller Gabriel</span>
+              </div>
+            </section>
+          </div>
+          <div>
+            <h4>Nuestas marcas</h4>
+          </div>
+        </div>
+
+        <div class="RedesyContacto">
+          <span><h4>Siguenos en nuestras redes</h4></span>
+          <div class="social-card">
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/facebook-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/instagram-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/youtube-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/tik-tok-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+          </div>
+          <div class="newsletter-form">
+            <h5 class="heading">Estaremos en contacto contigo</h5>
+            <form class="formdatos">
+              <input
+                required=""
+                placeholder="Ingresa tú correo electronico"
+                name="email"
+                id="email"
+                type="email"
+              />
+              <input value="Contacto" type="submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Bogotá- Colombia &copy; 2024</h4>
+      </div>
+    </footer>
+    <script src="/FrontEnd/js/Inicio/Estadisticas.js"></script>
+    <script src="/FrontEnd/js/Inicio/Fechas.js"></script>
+    <script src="/FrontEnd/js/Inicio/Noticias.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

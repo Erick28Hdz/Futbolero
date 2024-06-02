@@ -1,0 +1,99 @@
+:root {
+  --color-negro: #000000;
+  --color-rojo: #841818;
+  --color-amarillo: #e0bb20;
+  --color-gris: #171717;
+  --titulos: Bungee;
+  --subtitulos: fuente-rubik-mono-one;
+  --contenidos: Suravaram;
+  --botones: Kanit;
+  --noticias: DM-Mono;
+  --subtextos: Sintony;
+}
+
+/*Secciòn selecciòn de idioma*/
+#languageSelector {
+  margin-bottom: 20px;
+}
+
+#languageMessage p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+/* cartas de formato para contenidos*/
+.seccioncards {
+  width: 150vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/*contenido de cambios*/
+.cardpreferencias {
+  width: 250px;
+  height: 280px;
+  padding: 10px;
+  background: var(--color-gris);
+  border-radius: 12px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.123);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .5s;
+}
+
+.cardpreferencias img {
+  height: 100px; /* Altura fija */
+  width: auto; /* El ancho se ajusta para mantener la proporción */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho de .card */
+}
+
+.botonguardar {
+  margin: 30px;
+}
+
+.textContainer {
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tituloclub {
+  font-family: var(--contenidos);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-amarillo);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+
+.profile {
+  font-size: 0.84em;
+  color: rgb(194, 194, 194);
+  letter-spacing: 0.2px;
+}
+
+.cardpreferencias:hover {
+  background-color: rgb(43, 43, 43);
+  transition-duration: .5s;
+}
+
+/*Equipos selección*/
+#teamSelect {
+  width: 170px; /* Ancho del dropdown */
+  padding: 5px; /* Espaciado interior para que sea más cómodo */
+  border-radius: 5px; /* Bordes redondeados para un look moderno */
+  border: 1px solid var(--color-rojo); /* Borde sutil */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px; /* Espacio entre la etiqueta y el dropdown */
+}
+

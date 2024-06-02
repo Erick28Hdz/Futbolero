@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/FrontEnd/css/Registros/Registrarse.css" />
+    <title>Registro de Partidos</title>
+  </head>
+  <body>
+    <header>
+      <a href="/BackEnd/Partidos/Partidos.php"
+        ><img
+          class="atras"
+          src="/FrontEnd/img/iconos/atrás rojo.png"
+          alt="return"
+      /></a>
+      <img
+        class="logo"
+        src="/FrontEnd/img/iconos/icono futbolero.png"
+        alt="Imagen 2"
+      />
+
+      <h1>Futbolero</h1>
+      <h2>Tú Ganador</h2>
+    </header>
+    <main>
+      <h3>Registrar nuevo partido</h3>
+      <div class="card">
+        <div class="card2">
+          <form
+            class="form"
+            action="/BackEnd/Partidos/Registrar.php"
+            method="post"
+          >
+            <p class="title">Registrar nuevo partido</p>
+            <p class="message">
+              Registra un nuevo partido para modificar la plataforma.
+            </p>
+            <label for="Calendario">
+              <input
+                class="input"
+                type="text"
+                name="Calendario"
+                id="Calendario"
+                required
+              />
+              <span>Calendario:</span>
+            </label>
+            <label for="ClubLocal">
+              <input
+                class="input"
+                type="text"
+                name="ClubLocal"
+                id="ClubLocal"
+                required
+              />
+              <span>Club Local:</span>
+            </label>
+            <label for="ClubVisitante">
+              <input
+                class="input"
+                type="text"
+                name="ClubVisitante"
+                id="ClubVisitante"
+                required
+              />
+              <span>Club Visitante:</span>
+            </label>
+            <label for="Hora">
+              <input
+                class="input"
+                type="text"
+                name="Hora"
+                id="Hora"
+                required
+              />
+              <span>Hora:</span>
+            </label>
+            <label for="Fecha">
+              <input
+                class="input"
+                type="date"
+                name="Fecha"
+                id="Fecha"
+                required
+              />
+              <span>Fecha:</span>
+            </label>
+            <label for="ResultadoLocal">
+              <input
+                class="input"
+                type="number"
+                name="ResultadoLocal"
+                id="ResultadoLocal"
+                required
+              />
+              <span>Resultado Local:</span>
+            </label>
+            <label for="ResultadoVisitante">
+              <input
+                class="input"
+                type="number"
+                name="ResultadoVisitante"
+                id="ResultadoVisitante"
+                required
+              />
+              <span>Resultado Visitante:</span>
+            </label>
+            <label for="Puntos">
+              <input
+                class="input"
+                type="number"
+                name="Puntos"
+                id="Puntos"
+                required
+              />
+              <span>Puntos:</span>
+            </label>
+            <label for="Goles">
+              <input
+                class="input"
+                type="number"
+                name="Goles"
+                id="Goles"
+                required
+              />
+              <span>Goles:</span>
+            </label>
+            <label for="TarjetasAmarillas">
+              <input
+                class="input"
+                type="number"
+                name="TarjetasAmarillas"
+                id="TarjetasAmarillas"
+                required
+              />
+              <span>Tarjetas Amarillas:</span>
+            </label>
+            <label for="TarjetasRojas">
+              <input
+                class="input"
+                type="number"
+                name="TarjetasRojas"
+                id="TarjetasRojas"
+                required
+              />
+              <span>Tarjetas Rojas:</span>
+            </label>
+            <label for="DoblesAmarillas">
+              <input
+                class="input"
+                type="number"
+                name="DoblesAmarillas"
+                id="DoblesAmarillas"
+                required
+              />
+              <span>Dobles Amarillas:</span>
+            </label>
+            <label for="FKIDPlantilla">
+              <input
+                class="input"
+                type="number"
+                name="FKIDPlantilla"
+                id="FKIDPlantilla"
+                required
+              />
+              <span>ID Plantilla:</span>
+            </label>
+            <label for="FKIDLigas">
+              <input
+                class="input"
+                type="number"
+                name="FKIDLigas"
+                id="FKIDLigas"
+                required
+              />
+              <span>ID Ligas:</span>
+            </label>
+            <!-- Botón de envío -->
+            <button class="submit" type="submit" value="Registrar">
+              Registrar
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>2023</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/FrontEnd/css/Registros/Registrarse.css" />
+        <title>Registro jugador</title>
+      </head>
+<body>
+    <header>
+        <a href="/BackEnd/Jugadores/jugadores.php">
+            <img src="/FrontEnd/img/iconos/atrás rojo.png" alt="" class="atras">
+        </a>
+        <img class="logo" src="/FrontEnd/img/iconos/icono futbolero.png" alt="Imagen 2">
+        <h1>Futbolero</h1>
+        <h2>Tú Ganador</h2>
+    </header>
+    <main>
+        <h3>Registrar nuevo jugador</h3>
+        <div class="card">
+            <div class="card2">
+                <form class="form" action="/BackEnd/Jugadores/registrar.php" method="post">
+                    <p class="title">Registro de Plantillas</p>
+                    <label for="dorsal">
+                        <input class="input" type="number" name="dorsal" id="dorsal" required>
+                        <span>Dorsal:</span>
+                    </label>
+                    <label for="posicion">
+                        <input class="input" type="text" name="posicion" id="posicion" required>
+                        <span>Posición:</span>
+                    </label>
+                    <label for="nombres">
+                        <input class="input" type="text" name="nombres" id="nombres" required>
+                        <span>Nombres:</span>
+                    </label>
+                    <label for="apellidos">
+                        <input class="input" type="text" name="apellidos" id="apellidos" required>
+                        <span>Apellidos:</span>
+                    </label>
+                    <label for="fecha_nacimiento">
+                        <input class="input" type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+                        <span>Fecha de Nacimiento:</span>
+                    </label>
+                    <label for="edad">
+                        <input class="input" type="number" name="edad" id="edad" required>
+                        <span>Edad:</span>
+                    </label>
+                    <label for="estatura">
+                        <input class="input" type="number" name="estatura" id="estatura" required>
+                        <span>Estatura:</span>
+                    </label>
+                    <label for="pie_habil">
+                        <input class="input" type="text" name="pie_habil" id="pie_habil" required>
+                        <span>Pie Hábil:</span>
+                    </label>
+                    <label for="precio_mercado">
+                        <input class="input" type="number" name="precio_mercado" id="precio_mercado" required>
+                        <span>Precio de Mercado:</span>
+                    </label>
+                    <label for="partidos_jugados">
+                        <input class="input" type="number" name="partidos_jugados" id="partidos_jugados" required>
+                        <span>Partidos Jugados:</span>
+                    </label>
+                    <label for="tiempo_jugado">
+                        <input class="input" type="text" name="tiempo_jugado" id="tiempo_jugado" required>
+                        <span>Tiempo Jugado:</span>
+                    </label>
+                    <label for="goles">
+                        <input class="input" type="number" name="goles" id="goles" required>
+                        <span>Goles:</span>
+                    </label>
+                    <label for="asistencias">
+                        <input class="input" type="number" name="asistencias" id="asistencias" required>
+                        <span>Asistencias:</span>
+                    </label>
+                    <label for="atajadas">
+                        <input class="input" type="number" name="atajadas" id="atajadas" required>
+                        <span>Atajadas:</span>
+                    </label>
+                    <label for="tarjetas_amarillas">
+                        <input class="input" type="number" name="tarjetas_amarillas" id="tarjetas_amarillas" required>
+                        <span>Tarjetas Amarillas:</span>
+                    </label>
+                    <label for="dobles_amarillas">
+                        <input class="input" type="number" name="dobles_amarillas" id="dobles_amarillas" required>
+                        <span>Dobles Amarillas:</span>
+                    </label>
+                    <label for="rojas_directas">
+                        <input class="input" type="number" name="rojas_directas" id="rojas_directas" required>
+                        <span>Rojas Directas:</span>
+                    </label>
+                    <label for="fk_temporada">
+                        <input class="input" type="number" name="fk_temporada" id="fk_temporada" required>
+                        <span>Temporada:</span>
+                    </label>
+                    <label for="fk_id_ligas">
+                        <input class="input" type="number" name="fk_id_ligas" id="fk_id_ligas" required>
+                        <span>ID de Liga:</span>
+                    </label>
+                    <label for="fk_id_clubes">
+                        <input class="input" type="number" name="fk_id_clubes" id="fk_id_clubes" required>
+                        <span>ID de Club:</span>
+                    </label>
+                    <label for="fk_id_nacionalidades">
+                        <input class="input" type="number" name="fk_id_nacionalidades" id="fk_id_nacionalidades" required>
+                        <span>ID de Nacionalidad:</span>
+                    </label>
+                    <label for="fk_id_seleccion_nacional">
+                        <input class="input" type="number" name="fk_id_seleccion_nacional" id="fk_id_seleccion_nacional" required>
+                        <span>ID de Selección Nacional:</span>
+                    </label>
+                    <label for="fk_id_patrocinadores">
+                        <input class="input" type="number" name="fk_id_patrocinadores" id="fk_id_patrocinadores" required>
+                        <span>ID de Patrocinador:</span>
+                    </label>
+                    <label for="fk_id_partidos">
+                        <input class="input" type="number" name="fk_id_partidos" id="fk_id_partidos" required>
+                        <span>ID de Partido:</span>
+                    </label>
+                    
+                    <button class="submit" type="submit" value="Registrar">Registrar Jugador</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>2023</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/FrontEnd/css/Foros/Foros.css" />
+    <title>Foros</title>
+  </head>
+  <body>
+    <header>
+      <section class="SeccionHeader">
+        <div class="BarraNavegacion">
+          <nav class="navbar bg-body-tertiary border-bottom fixed-top">
+            <div class="container-fluid">
+              <div class="NavFutbolero">
+                <a class="navbar-brand" href="#"
+                  ><img
+                    class="logoIcono"
+                    src="/FrontEnd/img/iconos/icono futbolero.png"
+                    alt=""
+                  />Futbolero</a
+                >
+                <p class="Slogan">Tú Ganador</p>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-start"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-header">
+                  <img
+                    class="logoIcono"
+                    src="/FrontEnd/img/iconos/icono futbolero.png"
+                    alt=""
+                  />
+                  <h3 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    Menú Futbolero
+                  </h3>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form class="d-flex mt-3" role="search">
+                    <div class="input-wrapper2">
+                      <button class="icon2">
+                        <img src="/FrontEnd/img/Iconos/buscar.png" alt="" />
+                      </button>
+                      <input
+                        type="text"
+                        name="text"
+                        class="input2"
+                        placeholder="Buscar"
+                      />
+                    </div>
+                  </form>
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="/FrontEnd/html/Administradores/Administrador.html"
+                        ><img
+                          src="/FrontEnd/img/Iconos/human-resources.png"
+                          alt=""
+                        />Administrador</a
+                      >
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="/FrontEnd/html/Inicio_sesion/Inicio.html"
+                        ><img src="/FrontEnd/img/Iconos/house.png" alt="" />
+                        Inicio</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img
+                          src="/FrontEnd/img/Iconos/campeonato-de-futbol.png"
+                          alt=""
+                        />
+                        Fútbol profesional
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Nacionales/SelNacionales.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/world-cup.png"
+                              alt=""
+                            />Selecciones Nacionales</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Ligas/Ligas.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/competition.png"
+                              alt=""
+                            />
+                            Competiciones profesionales</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Clubes/Clubes.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/club-de-futbol.png"
+                              alt=""
+                            />Clubes profesionales de Fútbol</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Jugadores/Jugadores.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/equipo.png"
+                              alt=""
+                            />Plantillas profesionales</a
+                          >
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Fichajes/Fichajes.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/decision.png"
+                              alt=""
+                            />Mercado de fichajes</a
+                          >
+                        </li>
+                      </ul>
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img
+                          src="/FrontEnd/img/Iconos/content-creator.png"
+                          alt=""
+                        />
+                        Contenido
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Noticias/Noticias.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/noticias.png"
+                              alt=""
+                            />Notícias</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Calendario/Calendario.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/calendario.png"
+                              alt=""
+                            />Calendario de partidos</a
+                          >
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Foros/Foros.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/grupo.png"
+                              alt=""
+                            />Fóros</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Estadisticas/Estadisticas.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/estadisticas.png"
+                              alt=""
+                            />Estadísticas</a
+                          >
+                        </li>
+                        <li></li>
+                      </ul>
+
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img
+                          src="/FrontEnd/img/Iconos/contactanos.png"
+                          alt=""
+                        />
+                        Sobre nosotros
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Contacto/RedesSociales.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/mercadeo-social.png"
+                              alt=""
+                            />Contactenos</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Plataforma/Terminos_Condiciones.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/contrato.png"
+                              alt=""
+                            />Terminos y condiciones</a
+                          >
+                        </li>
+                      </ul>
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="/FrontEnd/html/Usuarios/Perfil.html"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        ><img src="/FrontEnd/img/Iconos/verified.png" alt="" />
+                        Preferencias
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/Perfil.html"
+                            ><img
+                              src="/FrontEnd/img/Iconos/perfil-usuario.png"
+                              alt=""
+                            />Mi perfil</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=1"
+                            ><img
+                              src="/FrontEnd/img/Iconos/administracion.png"
+                              alt=""
+                            />Editar perfil</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=2"
+                            ><img
+                              src="/FrontEnd/img/Iconos/administracion-del-dinero.png"
+                              alt=""
+                            />Actualizar membresia</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=3"
+                            ><img
+                              src="/FrontEnd/img/Iconos/titulo.png"
+                              alt=""
+                            />Personalizar perfil</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=4"
+                            ><img
+                              src="/FrontEnd/img/Iconos/satisfaccion.png"
+                              alt=""
+                            />Editar preferencias</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="/FrontEnd/html/Usuarios/ActualizarPerfil.html?contenido=5"
+                            ><img
+                              src="/FrontEnd/img/Iconos/alerta.png"
+                              alt=""
+                            />Configurar notificaciones</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="Cabecera">
+          <div class="Seccionbotonatras">
+            <a id="BotonAtras" href="/FrontEnd/html/Inicio_sesion/Inicio.html"
+              ><img src="/FrontEnd/img/iconos/atras.png" alt="" class="atras"
+            /></a>
+            <a id="BotonAtras" href="/FrontEnd/html/Plataforma/Inicio.html"
+              ><img
+                src="/FrontEnd/img/iconos/adelante.png"
+                alt=""
+                class="atras"
+            /></a>
+          </div>
+          <div class="MarcaFutbolero">
+            <img
+              class="logo"
+              src="/FrontEnd/img/iconos/icono futbolero.png"
+              alt="Imagen 2"
+            />
+            <h1>Futbolero</h1>
+            <h2>Tú Ganador</h2>
+          </div>
+          <div class="SeccionPersonal">
+            <div class="BotonesPrincipales">
+              <div class="input-container">
+                <input
+                  type="text"
+                  name="text"
+                  class="input"
+                  placeholder="Escribe tú busqueda"
+                />
+                <img
+                  class="icon"
+                  src="/FrontEnd/img/Iconos/buscar.png"
+                  alt=""
+                />
+              </div>
+              <input type="checkbox" id="checkboxInput" />
+              <label for="checkboxInput" class="toggleSwitch">
+                <div class="speaker">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.0"
+                    viewBox="0 0 75 75"
+                  >
+                    <path
+                      d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
+                      style="
+                        stroke: #fff;
+                        stroke-width: 5;
+                        stroke-linejoin: round;
+                        fill: #fff;
+                      "
+                    ></path>
+                    <path
+                      d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
+                      style="
+                        fill: none;
+                        stroke: #fff;
+                        stroke-width: 5;
+                        stroke-linecap: round;
+                      "
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="mute-speaker">
+                  <svg
+                    version="1.0"
+                    viewBox="0 0 75 75"
+                    stroke="#fff"
+                    stroke-width="5"
+                  >
+                    <path
+                      d="m39,14-17,15H6V48H22l17,15z"
+                      fill="#fff"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="m49,26 20,24m0-24-20,24"
+                      fill="#fff"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+              </label>
+              <form
+                action="/BackEnd/Plataforma/cerrar_sesion.php"
+                method="post"
+              >
+                <button type="submit" class="Btn">
+                  <div class="sign">
+                    <svg viewBox="0 0 512 512">
+                      <path
+                        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text">Cerrar sesión</div>
+                </button>
+              </form>
+            </div>
+            <div class="audio-player">
+              <div class="player-controls">
+                <div class="song-info">
+                  <div class="song-title">Canción</div>
+                  <p class="artist">Artista</p>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress"></div>
+                </div>
+                <div class="buttons">
+                  <button class="skip-btn">
+                    <img src="/FrontEnd/img/Iconos/anterior.png" alt="" />
+                  </button>
+                  <button class="play-btn">
+                    <img src="/FrontEnd/img/Iconos/play.png" alt="" />
+                  </button>
+                  <button class="play-btn">
+                    <img src="/FrontEnd/img/Iconos/pause.png" alt="" />
+                  </button>
+                  <button class="pause-btn">
+                    <img src="/FrontEnd/img/Iconos/parar.png" alt="" />
+                  </button>
+                  <button class="volume-btn">
+                    <img src="/FrontEnd/img/Iconos/siguiente.png" alt="" />
+                  </button>
+                  <label class="slider">
+                    <input type="range" class="level" />
+                    <img
+                      class="volume"
+                      src="/FrontEnd/img/Iconos/altavoz.png"
+                      alt=""
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <h3>Foros</h3>
+
+      <section class="sección-segunda">
+        <div class="GustosTitulo">
+          <h4>¡Bienvenido a la guerra de ideas por el fútbol!</h4>
+        </div>
+        <div class="container1">
+          <div class="cardSecdos" onclick="mostrarContenido(1)">
+            Foros internacionales
+          </div>
+          <div class="cardSecdos" onclick="mostrarContenido(2)">
+            Foro de clubes
+          </div>
+          <div class="cardSecdos" onclick="mostrarContenido(3)">
+            foro de jugadores
+          </div>
+          <div class="cardSecdos" onclick="mostrarContenido(4)">
+            Foro de noticias
+          </div>
+        </div>
+        <div class="ContentContainer1">
+          <div id="contenido1" class="contenido" style="display: none">
+            <!-- Contenido para foros internacionales -->
+            <div class="SeccionPrincipal">
+              <div class="PresentacionSeccion">
+                <img
+                  class="ContenidoImg"
+                  src="/FrontEnd/img/Escudos/Escudos nacionales/Inglaterra.png"
+                  alt="Imagen 4"
+                />
+                <h4>
+                  ¡Bienvenidos al Foro de Fútbol Internacional: Países y
+                  Selecciones!
+                </h4>
+                <h5>
+                  ¿Vibra tu corazón al ritmo de los tambores de la afición de tu
+                  selección nacional? <br />
+                  ¿Sientes un orgullo indescriptible cuando ves a tu país
+                  competir en el escenario mundial?
+                </h5>
+              </div>
+              <div class="CardSeccion">
+                <p>
+                  ¡Este es tu espacio! En el Foro de Fútbol Internacional:
+                  Países y Selecciones, celebramos la pasión que nos une más
+                  allá de nuestras fronteras: el amor por el fútbol. Este es un
+                  lugar de encuentro para aficionados de todas las selecciones
+                  nacionales, desde las más laureadas hasta aquellas que sueñan
+                  con hacer historia. <br />
+                  🌍 Explora la Cultura del Fútbol Global: Descubre historias
+                  fascinantes, tácticas, estilos de juego y las últimas noticias
+                  de selecciones de todo el mundo. Amplía tus horizontes y
+                  comparte tu conocimiento con una comunidad diversa y
+                  apasionada. <br />
+                  🏆 Debate Sobre los Grandes Torneos: Desde la Copa del Mundo
+                  hasta la Eurocopa, la Copa América y más allá, este es el
+                  espacio para analizar cada juego, estrategia y momento
+                  emocionante que solo el fútbol internacional puede ofrecer.
+                  <br />
+                  🤝 Únete a una Comunidad Global: Conecta con fans de todo el
+                  mundo. Intercambia opiniones, celebra las victorias y ofrece
+                  tu apoyo en los momentos difíciles. En este foro, la pasión
+                  por el fútbol crea puentes entre culturas y naciones. <br />
+                  ⭐ Sé un Crítico Deportivo: ¿Tienes un ojo crítico para las
+                  tácticas y formaciones? ¿Te encanta analizar el desempeño de
+                  los jugadores en el escenario internacional? Aquí tu análisis
+                  puede brillar, ofreciendo insights profundos sobre los
+                  encuentros más importantes. <br />
+                  🏅 Participa en Encuestas y Quizzes: Exprime tu cerebro con
+                  nuestras encuestas y quizzes. Demuestra tus conocimientos y
+                  aprende de manera divertida sobre la rica historia del fútbol
+                  internacional y sus legendarios protagonistas. Este foro es
+                  más que un lugar de discusión; es una celebración de lo que
+                  nos hace únicos y, a la vez, nos une: nuestro amor
+                  incondicional por el fútbol. Aquí, cada partido es una
+                  historia de pasión, cada selección lleva el peso de un país, y
+                  cada fan aporta a la rica tapestria del fútbol mundial.
+                </p>
+              </div>
+            </div>
+            <section class="seccioncomentarios" id="paises">
+              <div class="cajacomentarios">
+                <h5>Debate de Noticias</h5>
+                <form class="form">
+                  <div class="title">Comparte tú opinión</div>
+                  <textarea placeholder="Your message"></textarea>
+                  <button>Submit</button>
+                </form>
+              </div>
+              <div class="listacomentarios">
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardnotice">
+                <div class="card-image"></div>
+                <p class="card-title">Debate de la semana</p>
+                <p class="card-body">
+                  Nullam ac tristique nulla, at convallis quam. Integer
+                  consectetur mi nec magna tristique, non lobortis.
+                </p>
+                <p class="footer">
+                  Written by <span class="by-name">John Doe</span> on
+                  <span class="date">25/05/23</span>
+                </p>
+              </div>
+            </section>
+          </div>
+          <div id="contenido2" class="contenido" style="display: none">
+            <!-- Contenido para foro de clubes -->
+            <div class="SeccionPrincipal">
+              <div class="PresentacionSeccion">
+                <img
+                  class="ContenidoImg"
+                  src="/FrontEnd/img/Escudos/Escudos nacionales/Inglaterra.png"
+                  alt="Imagen 4"
+                />
+                <h4>¡Bienvenidos al Gran Foro de Clubes de Fútbol!</h4>
+                <h5>
+                  ¿Eres apasionado por el fútbol? ¿Tu corazón late más fuerte
+                  cada vez que tu equipo sale al campo?
+                </h5>
+              </div>
+              <div class="CardSeccion">
+                <p>
+                  ¡Entonces has encontrado tu segunda casa! Aquí, en el Foro de
+                  Clubes de Fútbol, te damos la bienvenida a un espacio donde la
+                  pasión por el fútbol no conoce límites. Desde los gigantes
+                  históricos hasta los equipos que luchan por hacer historia,
+                  este es el lugar donde cada club tiene su espacio para
+                  brillar. <br />
+                  🏆 Participa en Debates Apasionantes: ¿Quién tiene la mejor
+                  afición? ¿Cuál ha sido el partido más emocionante de la
+                  temporada? Sumérgete en debates que encienden pasiones y
+                  comparte tus opiniones con una comunidad que vive y respira
+                  fútbol. <br />
+                  ⚽ Únete a la Celebración del Fútbol: Este es el espacio
+                  perfecto para celebrar cada gol, cada victoria, y sí, también
+                  para apoyarnos en las derrotas. Comparte tus mejores momentos
+                  y memorias asociadas a tu club del alma. <br />
+                  🎤 Eleva tu Voz: ¿Tienes ideas sobre cómo mejorar el equipo?
+                  ¿Quieres analizar la última formación o estrategia usada por
+                  tu club? Este es tu megáfono para que otros aficionados
+                  escuchen y se sumen a tu visión. <br />🌟 Conviértete en un
+                  Experto: Participa activamente y podrías ser reconocido como
+                  un Experto del Foro. Los miembros más activos y constructivos
+                  recibirán distinciones especiales y podrán liderar discusiones
+                  y grupos dentro del foro. <br />💬 Interactúa en Tiempo Real:
+                  ¿El partido está por comenzar? Únete a nuestras salas de chat
+                  en vivo para compartir cada minuto de la acción con
+                  aficionados tan apasionados como tú. Estamos aquí para
+                  asegurarnos de que cada voz sea escuchada, cada opinión
+                  valorada, y sobre todo, para celebrar nuestra pasión común: el
+                  fútbol. Porque este no es solo un deporte, es nuestra vida. Y
+                  ahora, más que nunca, es el momento de unirnos y compartir esa
+                  pasión.
+                </p>
+              </div>
+            </div>
+            <section class="seccioncomentarios" id="clubes">
+              <div class="cajacomentarios">
+                <h5>Debate de Noticias</h5>
+                <form class="form">
+                  <div class="title">Comparte tú opinión</div>
+                  <textarea placeholder="Your message"></textarea>
+                  <button>Submit</button>
+                </form>
+              </div>
+              <div class="listacomentarios">
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardnotice">
+                <div class="card-image"></div>
+                <p class="card-title">Debate de la semana</p>
+                <p class="card-body">
+                  Nullam ac tristique nulla, at convallis quam. Integer
+                  consectetur mi nec magna tristique, non lobortis.
+                </p>
+                <p class="footer">
+                  Written by <span class="by-name">John Doe</span> on
+                  <span class="date">25/05/23</span>
+                </p>
+              </div>
+            </section>
+          </div>
+          <div id="contenido3" class="contenido" style="display: none">
+            <!-- Contenido para foro de jugadores -->
+            <div class="SeccionPrincipal">
+              <div class="PresentacionSeccion">
+                <img
+                  class="ContenidoImg"
+                  src="/FrontEnd/img/Escudos/Escudos nacionales/Inglaterra.png"
+                  alt="Imagen 4"
+                />
+                <h4>
+                  ¡Bienvenidos al Foro de Estrellas del Balompié: Jugadores de
+                  Fútbol!
+                </h4>
+                <h5>
+                  ¿Sientes admiración por la habilidad y técnica de los grandes
+                  jugadores? ¿Te apasiona seguir las carreras de futbolistas que
+                  hacen historia con cada gol, cada asistencia, cada jugada
+                  magistral?
+                </h5>
+              </div>
+              <div class="CardSeccion">
+                <p>
+                  ¡Este es precisamente tu lugar! En el Foro de Estrellas del
+                  Balompié: Jugadores de Fútbol, rendimos homenaje a esos héroes
+                  del terreno de juego, desde las leyendas vivientes hasta las
+                  promesas emergentes que están escribiendo los nuevos capítulos
+                  de este hermoso deporte. <br />
+                  ⚽ Celebra a Tus Ídolos: Este es el espacio ideal para
+                  compartir y debatir sobre la trayectoria, logros y momentos
+                  icónicos de tus jugadores favoritos. Desde los íconos eternos
+                  hasta las estrellas actuales y los talentos del mañana, todos
+                  tienen un lugar en este foro. <br />
+                  🌟 Análisis Profundo de Jugadas: Sumérgete en discusiones
+                  técnicas sobre habilidades, tácticas y decisiones en el campo
+                  que hacen de un futbolista, una verdadera estrella. Comparte
+                  videos, análisis y estadísticas para enriquecer el debate.
+                  <br />
+                  🔍 Descubre Nuevos Talentos: Este es también un espacio para
+                  que los aficionados al fútbol descubran y promocionen a
+                  futuras estrellas. ¿Conoces a un jugador increíble que está
+                  bajo el radar? ¡Preséntalo aquí y demostremos juntos su
+                  potencial! <br />
+                  📊 Vota en Encuestas: ¿Quién es el mejor delantero del mundo?
+                  ¿Cuál ha sido el gol más espectacular de la temporada?
+                  Participa en nuestras encuestas y votaciones para ver cómo se
+                  comparan tus opiniones con las de la comunidad. <br />
+                  💬 Interacción y Comunidad: Más que un foro, somos una
+                  comunidad global unida por nuestra pasión por el fútbol y sus
+                  protagonistas. Aquí, cada opinión cuenta y cada miembro es
+                  valorado. Este foro se dedica a todos aquellos que ven en el
+                  fútbol un arte, y en cada jugador, un artista. Nos inspiran
+                  sus historias de lucha, perseverancia y triunfo, y aquí,
+                  juntos, celebramos su contribución al deporte más hermoso del
+                  mundo. ¿Listo para compartir tu pasión por las grandes figuras
+                  del fútbol? Únete ahora al Foro de Estrellas del Balompié:
+                  Jugadores de Fútbol y sé parte de esta emocionante aventura.
+                </p>
+              </div>
+            </div>
+            <section class="seccioncomentarios" id="jugadores">
+              <div class="cajacomentarios">
+                <h5>Debate de Noticias</h5>
+                <form class="form">
+                  <div class="title">Comparte tú opinión</div>
+                  <textarea placeholder="Your message"></textarea>
+                  <button>Submit</button>
+                </form>
+              </div>
+              <div class="listacomentarios">
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardnotice">
+                <div class="card-image"></div>
+                <p class="card-title">Debate de la semana</p>
+                <p class="card-body">
+                  Nullam ac tristique nulla, at convallis quam. Integer
+                  consectetur mi nec magna tristique, non lobortis.
+                </p>
+                <p class="footer">
+                  Written by <span class="by-name">John Doe</span> on
+                  <span class="date">25/05/23</span>
+                </p>
+              </div>
+            </section>
+          </div>
+          <div id="contenido4" class="contenido" style="display: none">
+            <!-- Contenido para foro de noticias -->
+            <div class="SeccionPrincipal">
+              <div class="PresentacionSeccion">
+                <img
+                  class="ContenidoImg"
+                  src="/FrontEnd/img/Escudos/Escudos nacionales/Inglaterra.png"
+                  alt="Imagen 4"
+                />
+                <h4>
+                  ¡Bienvenidos al Centro de Noticias Futbolísticas: Últimas y
+                  más Calientes Novedades del Mundo del Fútbol!
+                </h4>
+                <h5>
+                  ¿Eres de los que no pueden empezar el día sin conocer las
+                  últimas noticias de fútbol? ¿Te apasiona estar siempre al
+                  tanto de los últimos fichajes, los rumores más candentes y las
+                  decisiones que sacuden el panorama futbolístico?
+                </h5>
+              </div>
+              <div class="CardSeccion">
+                <p>
+                  ¡Este es tu sitio ideal! En el Foro de Noticias Futbolísticas,
+                  te sumergirás en el corazón del fútbol, donde las últimas
+                  noticias y los debates más intensos te esperan día a día. Este
+                  espacio está dedicado a todos los aficionados que viven por y
+                  para el fútbol, ofreciéndoles un punto de encuentro para
+                  compartir, debatir y analizar todo lo que sucede en el mundo
+                  del balompié. <br />
+                  📰 Noticias Frescas Todos los Días: Desde traspasos hasta
+                  lesiones, pasando por ruedas de prensa y cambios en la
+                  dirección técnica, aquí tendrás las noticias más recientes al
+                  alcance de tu mano. <br />
+                  🔍 Análisis Profundo: No solo te traemos las noticias, sino
+                  que profundizamos en ellas. Participa en análisis detallados
+                  sobre cómo las últimas novedades afectan las ligas, equipos y
+                  la escena internacional. <br />
+                  🗣️ Debates Calientes: ¿Estás de acuerdo con el último fichaje
+                  de tu equipo? ¿Crees que la sanción a aquel jugador fue justa?
+                  Este es el lugar para expresar tus opiniones y debatir con
+                  otros aficionados tan apasionados como tú. <br />
+                  🌐 Cobertura Global: Nuestro foro abarca noticias de fútbol de
+                  todo el mundo. Desde la Premier League hasta la Liga MX,
+                  pasando por la Champions League y más allá, si está pasando en
+                  el mundo del fútbol, lo encontrarás aquí. <br />
+                  💼 Mercado de Fichajes: Sigue de cerca el mercado de fichajes,
+                  con actualizaciones en tiempo real, análisis de los traspasos
+                  y debates sobre cómo estos movimientos redefinirán las fuerzas
+                  en las competiciones. Este foro es tu primera línea para todo
+                  lo relacionado con el fútbol. Aquí, la velocidad de la
+                  información se une a la profundidad del análisis, creando el
+                  ambiente perfecto para los aficionados que desean comprender y
+                  debatir cada aspecto del juego que amamos. <br />
+                  ¿Preparado para sumergirte en el flujo constante de noticias
+                  futbolísticas? Únete a nosotros en el Foro de Noticias
+                  Futbolísticas y sé el primero en conocer, comentar y debatir
+                  todo lo que sucede en el vibrante mundo del fútbol.
+                </p>
+              </div>
+            </div>
+            <!--Inicio opinion de usuario-->
+            <div class="tituloscomentarios">
+              <h4>¿Que opinas?</h4>
+              <h4>Dejanos tu comentario</h4>
+            </div>
+            <section class="seccioncomentarios" id="noticias">
+              <div class="cajacomentarios">
+                <h5>Debate de Noticias</h5>
+                <form class="form">
+                  <div class="title">Comparte tú opinión</div>
+                  <textarea placeholder="Your message"></textarea>
+                  <button>Submit</button>
+                </form>
+              </div>
+              <div class="listacomentarios">
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+                <div class="commentBox">
+                  <div class="profileImage">
+                    <img src="/FrontEnd/img/Iconos/icono usuario.png" alt="" />
+                  </div>
+                  <div class="commentContent">
+                    <div class="userInfo">
+                      <span class="username">Nombre de Usuario</span>
+                      <span class="timestamp">Hace 1 hora</span>
+                    </div>
+                    <div class="commentText">
+                      <!-- Aquí iría el comentario -->
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nulla ac odio sit amet quam convallis interdum.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardnotice">
+                <div class="card-image"></div>
+                <p class="card-title">Debate de la semana</p>
+                <p class="card-body">
+                  Nullam ac tristique nulla, at convallis quam. Integer
+                  consectetur mi nec magna tristique, non lobortis.
+                </p>
+                <p class="footer">
+                  Written by <span class="by-name">John Doe</span> on
+                  <span class="date">25/05/23</span>
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="MainFooter">
+        <div class="InformacionFooter">
+          <div class="Asociados">
+            <h4>Nuestros Asociados</h4>
+            <section class="InfoAsociados">
+              <div class="ImgInformacion">
+                <img src="/FrontEnd/img/Asociados/ArteGestión 0 1.png" alt="" />
+                <span>ArteGestión</span>
+              </div>
+              <div class="ImgInformacion">
+                <img src="/FrontEnd/img/Asociados/logo gbo 2023.png" alt="" />
+                <span>Taller Gabriel</span>
+              </div>
+            </section>
+          </div>
+          <div>
+            <h4>Nuestas marcas</h4>
+          </div>
+        </div>
+
+        <div class="RedesyContacto">
+          <span><h4>Siguenos en nuestras redes</h4></span>
+          <div class="social-card">
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/facebook-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/instagram-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/youtube-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+
+            <button class="BtnRedes">
+              <span class="ImgContainer">
+                <img src="/FrontEnd/img/Iconos/tik-tok-new.png" alt="" />
+              </span>
+              <span class="BG"></span>
+            </button>
+          </div>
+          <div class="newsletter-form">
+            <h5 class="heading">Estaremos en contacto contigo</h5>
+            <form class="form">
+              <input
+                required=""
+                placeholder="Ingresa tú correo electronico"
+                name="email"
+                id="email"
+                type="email"
+              />
+              <input value="Contacto" type="submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Bogotá- Colombia &copy; 2024</h4>
+      </div>
+    </footer>
+    <script src="/FrontEnd/js/Foros/Foros.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

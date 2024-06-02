@@ -1,0 +1,21 @@
+{
+  "name": "Cypress",
+  "version": "1.0.0",
+  "description": "Framework testing cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "Automation",
+    "framework",
+    "test",
+    "cypress"
+  ],
+  "author": "Erik Hernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.6"
+  }
+}

@@ -1,0 +1,353 @@
+:root {
+  --color-negro: #000000;
+  --color-rojo: #841818;
+  --color-amarillo: #e0bb20;
+  --color-gris: #171717;
+  --titulos: Bungee;
+  --subtitulos: fuente-rubik-mono-one;
+  --contenidos: Suravaram;
+  --botones: Kanit;
+  --noticias: DM-Mono;
+  --subtextos: Sintony;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  line-height: normal; 
+  background: linear-gradient(
+    to bottom,
+    var(--color-amarillo),
+    var(--color-negro)
+  );
+  background-size: cover;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.atras {
+  width: 50px;
+  position: relative;
+  top: 40px;
+  left: 20px;
+}
+
+.logo {
+  width: 120px;
+  margin: -20px auto;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transition: transform 0.8s;
+  border-radius: 50%;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}
+
+h1 {
+  font-size: 60px !important;
+  text-align: center;
+  font-family: var(--titulos);
+  text-shadow: 1px 1px 2px black, 0 0 25px var(--color-rojo),
+    0 0 5px var(--color-rojo);
+  -webkit-text-stroke: 2px var(--color-rojo);
+  color: var(--color-negro) !important;
+  filter: blur(3px);
+  transition: 0.3s all;
+}
+
+h1:hover {
+  filter: blur(0);
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--color-negro) !important;
+  text-align: center;
+  font-family: var(--titulos);
+  -webkit-text-stroke: 2px var(--color-rojo);
+  text-shadow: 1px 1px 2px black, 0 0 25px var(--color-rojo),
+    0 0 5px var(--color-rojo);
+  letter-spacing: 15px;
+  position: relative;
+  bottom: 15px;
+  left: 10px;
+}
+
+h3 {
+  font-size: 50px !important;
+  color: var(--color-negro) !important;
+  text-align: center;
+  font-family: var(--subtitulos);
+  -webkit-text-stroke: 2px var(--color-rojo);
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  color: var(--color-amarillo) !important;
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 15px var(--color-rojo),
+    0 0 5px var(--color-negro);
+  font-family: var(--titulos);
+  font-size: 40px !important;
+  font-weight: bold !important;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.table-container {
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 5px;
+  border: 4px solid var(--color-negro);
+  padding: 2px;
+  background-color: var(--color-gris);
+  margin-right: 5px;
+  box-sizing: border-box;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.table-container:hover {
+  box-shadow: 0px 0px 20px 4px var(--color-rojo);
+}
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 1px;
+  width: 98%;
+  margin: 2px auto;
+  border-radius: 5px;
+}
+
+table:hover {
+  background-color: var(--color-rojo);
+  box-shadow: 0px 0px 15px 1px var(--color-amarillo);
+}
+
+tr {
+  margin: 0 auto;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: rgb(243, 255, 80);
+}
+
+th {
+  padding: 2px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--color-negro);
+  color: var(--color-amarillo);
+  font-family: var(--subtextos);
+  border-radius: 5px;
+}
+
+th:hover {
+  background-color: var(--color-rojo);
+}
+
+a.titabla {
+  background: none;
+  color: var(--color-amarillo) !important;
+}
+
+td {
+  background-color: var(--color-amarillo);
+  opacity: 0.9;
+  padding: 2px;
+  text-align: center;
+  font-family: var(--botones);
+  border-radius: 3px;
+}
+
+a {
+  text-align: center;
+  margin: 1px;
+  padding: 3px;
+  text-decoration: none !important;
+  color: var(--color-amarillo) !important;
+  border-radius: 4px;
+}
+
+.button {
+  margin: 2px auto;
+  padding: 3px 5px;
+  font-size: 1rem;
+  align-items: stretch;
+  border-width: 2px;
+  padding: 10px;
+  transition: all 0.2s;
+  border-style: outset;
+  border: 2px solid var(--color-rojo);
+  color: var(--color-amarillo) !important;
+  background-color: var(--color-negro);
+  box-shadow: 2px 2px 0 0 #000000;
+  border-radius: 5px;
+  font-family: var(--botones);
+  cursor: pointer;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: -1;
+  transition: all 0.7s;
+  transform: translateY(-50%);
+}
+
+.button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 20px 50px 0 0 black;
+}
+
+.button:hover::before {
+  width: 50%;
+  left: 50%;
+}
+
+.button:hover::after {
+  width: 50%;
+  right: 50%;
+}
+
+.button:hover {
+  background-color: #841818;
+  box-shadow: #841818 0 30px 60px -12px inset, #841818 0 18px 36px -18px inset,
+    2px 5px 0 0 #000000;
+  z-index: 2;
+  font-family: var(--botones);
+  border-radius: 5px;
+  border: 2px solid var(--color-negro);
+  transform: translateY(-4px) translateX(-2px);
+}
+
+.filtros {
+  position: relative;
+  bottom: 40px;
+  width: 25%;
+}
+.title {
+  font-size: 40px;
+  color: var(--color-negro) !important;
+  text-align: center;
+  font-family: var(--subtitulos);
+  -webkit-text-stroke: 2px var(--color-rojo);
+}
+
+.form {
+  color: #fff;
+  background-color: var(--color-amarillo);
+  padding: 5px;
+  border: 4px solid var(--color-negro);
+  border-radius: 5px;
+  position: relative;
+  bottom: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--subtextos);
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  gap: 10px;
+}
+
+.form:hover {
+  box-shadow: 0px 0px 20px 4px var(--color-rojo);
+}
+.form label {
+  position: relative;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  border-radius: 15px;
+}
+.form label .input {
+  background-color: #333;
+  color: var(--color-amarillo);
+  width: 100%;
+  padding: 20px 10px 5px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  border-radius: 15px;
+  appearance: none;
+}
+
+.form label .input + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 7px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+}
+
+.botones {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  position: relative;
+  bottom: 100px;
+}
+
+/* Estilos del footer */
+footer {
+  background-color: var(--color-rojo);
+  color: #fff;
+  text-align: center;
+  opacity: 0.6;
+  width: 100%;
+  margin-top: auto;
+  margin: 0;
+}
+
+footer p {
+  font-size: 20px;
+  font-family: var(--titulos);
+  margin: 0 auto;
+}
+
+footer:hover {
+  background-color: var(--color-amarillo);
+  color: var(--color-negro);
+}
+
+footer:hover p:hover{
+  font-size: 20px;
+}

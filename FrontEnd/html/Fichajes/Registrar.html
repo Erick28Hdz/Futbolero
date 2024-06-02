@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/FrontEnd/img/iconos/icono futbolero.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Kanit:wght@500&family=Rubik+Mono+One&family=Sintony&family=Suravaram&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/FrontEnd/css/Registros/Registrarse.css" />
+    <title>Registro fichajes</title>
+  </head>
+  <body>
+    <header>
+      <a href="/BackEnd/Fichajes/Fichajes.php">
+        <img src="/FrontEnd/img/iconos/atrás rojo.png" alt="" class="atras" />
+      </a>
+      <img
+        class="logo"
+        src="/FrontEnd/img/iconos/icono futbolero.png"
+        alt="Imagen 2"
+      />
+      <h1>Futbolero</h1>
+      <h2>Tú Ganador</h2>
+    </header>
+    <main>
+      <h3>Registrar nuevo fichaje</h3>
+      <div class="card">
+        <div class="card2">
+          <form
+            class="form"
+            action="/BackEnd/Fichajes/Registrar.php"
+            method="post"
+          >
+            <p class="title">Registro de Fichajes</p>
+            <label for="TipoFichaje">
+              <input
+                class="input"
+                type="text"
+                name="TipoFichaje"
+                id="tipo_fichaje"
+                required
+              />
+              <span>Tipo de Fichaje:</span>
+            </label>
+            <label for="ClubAnterior">
+              <input
+                class="input"
+                type="text"
+                name="ClubAnterior"
+                id="club_anterior"
+                required
+              />
+              <span>Club Anterior:</span>
+            </label>
+            <label for="ClubActual">
+              <input
+                class="input"
+                type="text"
+                name="ClubActual"
+                id="club_actual"
+                required
+              />
+              <span>Club Actual:</span>
+            </label>
+            <label for="CostoFichaje">
+              <input
+                class="input"
+                type="number"
+                name="CostoFichaje"
+                id="costo_fichaje"
+                required
+              />
+              <span>Costo de Fichaje:</span>
+            </label>
+            <label for="FKIDTemporada">
+              <input
+                class="input"
+                type="number"
+                name="FKIDTemporada"
+                id="fk_id_temporada"
+                required
+              />
+              <span>ID Temporada:</span>
+            </label>
+            <label for="FKIDPlantillas">
+              <input
+                class="input"
+                type="number"
+                name="FKIDPlantillas"
+                id="fk_id_plantillas"
+                required
+              />
+              <span>ID Plantillas:</span>
+            </label>
+            <label for="FKIDClubes">
+              <input
+                class="input"
+                type="number"
+                name="FKIDClubes"
+                id="fk_id_clubes"
+                required
+              />
+              <span>ID Clubes:</span>
+            </label>
+            <!-- Otros campos relevantes -->
+            <button class="submit" type="submit" value="Registrar">
+              Registrar Fichaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>2023</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

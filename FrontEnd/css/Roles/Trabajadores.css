@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(to bottom, #e0bb20, black);
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  color: #333; /* Color del texto */
+  text-align: center;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+form {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+#Registrar th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+#Registrar th {
+  background-color: #4caf50; /* Color de fondo del encabezado */
+  color: white;
+}
+
+#Registrar a {
+  text-decoration: none;
+  color: #333;
+}
+
+#Registrar a:hover {
+  color: #4caf50; /* Cambio de color al pasar el mouse sobre el enlace */
+}
+
+#Registrar .RegistroTrabajador {
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 20px auto; /* Centrar el formulario en la página */
+  padding: 20px;
+  background-color: #fff; /* Color de fondo del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+#Registrar label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049; /* Cambio de color al pasar el mouse sobre el botón */
+}
+
+a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+#Registrar a:hover {
+  color: #4caf50; /* Cambio de color al pasar el mouse sobre el enlace */
+}
+
+#Editar {
+}
+
+#Editar label {
+  display: block;
+  margin-bottom: 8px;
+}
