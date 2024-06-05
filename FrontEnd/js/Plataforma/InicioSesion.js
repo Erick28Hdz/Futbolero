@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const terminosCheckbox = document.getElementById("terminosCheckbox");
-    const form = document.querySelector(".form");
+    const form = document.querySelector(".form, .formdatos");
   
     form.addEventListener("submit", function (event) {
       if (!terminosCheckbox.checked) {
