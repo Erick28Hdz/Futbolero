@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-03-2024 a las 16:45:44
+-- Tiempo de generación: 05-06-2024 a las 06:44:41
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,6 +20,129 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `futbolerodb`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ActualizarEstadistica` (IN `pID` INT, IN `pPosesion` DECIMAL(5,2), IN `pTirosEsquina` INT, IN `pMarcador` INT, IN `pTiroArco` INT, IN `pEmpate` INT, IN `pVictoriaVisitante` INT, IN `pVictoriaLocal` INT, IN `pFaltas` INT, IN `pGoles` INT, IN `pAtajadas` INT, IN `pTarjetasAmarillas` INT, IN `pTarjetasRojas` INT, IN `pFKIDPartido` INT, IN `pFKIDPlantilla` INT, IN `pFKIDClub` INT, IN `pFKIDSeleccionesNacionales` INT)   BEGIN
+    UPDATE tblestadisticas
+    SET
+        Posesion = pPosesion,
+        TirosEsquina = pTirosEsquina,
+        Marcador = pMarcador,
+        TiroArco = pTiroArco,
+        Empate = pEmpate,
+        VictoriaVisitante = pVictoriaVisitante,
+        VictoriaLocal = pVictoriaLocal,
+        Faltas = pFaltas,
+        Goles = pGoles,
+        Atajadas = pAtajadas,
+        TarjetasAmarillas = pTarjetasAmarillas,
+        TarjetasRojas = pTarjetasRojas,
+        FKIDPartido = pFKIDPartido,
+        FKIDPlantilla = pFKIDPlantilla,
+        FKIDClub = pFKIDClub,
+        FKIDSeleccionesNacionales = pFKIDSeleccionesNacionales
+    WHERE ID = pID;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `create_position_table` (IN `league_id` INT)   BEGIN
+    DECLARE table_name VARCHAR(255);
+    SET table_name = CONCAT('posiciones_liga_', league_id);
+    
+    SET @createTableQuery = CONCAT('
+        CREATE TABLE ', table_name, ' (
+            ID int(11) NOT NULL AUTO_INCREMENT,
+            FKIDTemporada int(11) NOT NULL,
+            FKIDClub int(11) NOT NULL,
+            Puntos int(11) DEFAULT 0,
+            PartidosJugados int(11) DEFAULT 0,
+            Victorias int(11) DEFAULT 0,
+            Empates int(11) DEFAULT 0,
+            Derrotas int(11) DEFAULT 0,
+            GolesFavor int(11) DEFAULT 0,
+            GolesContra int(11) DEFAULT 0,
+            DiferenciaGoles int(11) AS (GolesFavor - GolesContra),
+            PRIMARY KEY (ID),
+            FOREIGN KEY (FKIDTemporada) REFERENCES tbltemporadas(IdTemporada),
+            FOREIGN KEY (FKIDClub) REFERENCES tblclubes(ID)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+    ');
+    
+    PREPARE stmt FROM @createTableQuery;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EliminarEstadistica` (IN `pID` INT)   BEGIN
+    DELETE FROM tblestadisticas WHERE ID = pID;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `generar_estadisticas` (IN `liga_id` INT)   BEGIN
+    -- Crear una tabla temporal para almacenar las estadísticas agregadas
+    CREATE TEMPORARY TABLE IF NOT EXISTS temp_estadisticas (
+        ClubID INT,
+        TotalGoles INT,
+        TotalFaltas INT,
+        TotalTarjetasAmarillas INT,
+        TotalTarjetasRojas INT,
+        TotalPosesion DECIMAL(5,2),
+        TotalTirosEsquina INT,
+        TotalTiroArco INT,
+        TotalAtajadas INT
+    );
+
+    -- Limpiar la tabla temporal
+    TRUNCATE TABLE temp_estadisticas;
+
+    -- Insertar datos agregados en la tabla temporal
+    INSERT INTO temp_estadisticas (ClubID, TotalGoles, TotalFaltas, TotalTarjetasAmarillas, TotalTarjetasRojas, TotalPosesion, TotalTirosEsquina, TotalTiroArco, TotalAtajadas)
+    SELECT
+        e.FKIDClub AS ClubID,
+        SUM(e.Goles) AS TotalGoles,
+        SUM(e.Faltas) AS TotalFaltas,
+        SUM(e.TarjetasAmarillas) AS TotalTarjetasAmarillas,
+        SUM(e.TarjetasRojas) AS TotalTarjetasRojas,
+        SUM(e.Posesion) AS TotalPosesion,
+        SUM(e.TirosEsquina) AS TotalTirosEsquina,
+        SUM(e.TiroArco) AS TotalTiroArco,
+        SUM(e.Atajadas) AS TotalAtajadas
+    FROM
+        tblestadisticas e
+    INNER JOIN
+        tblpartidos p ON e.FKIDPartido = p.ID
+    WHERE
+        p.FKIDLigas = liga_id
+    GROUP BY
+        e.FKIDClub;
+
+    -- Seleccionar los resultados de la tabla temporal
+    SELECT * FROM temp_estadisticas;
+
+    -- Opcional: Limpiar la tabla temporal después de la consulta
+    DROP TEMPORARY TABLE IF EXISTS temp_estadisticas;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertarEstadistica` (IN `pPosesion` DECIMAL(5,2), IN `pTirosEsquina` INT, IN `pMarcador` INT, IN `pTiroArco` INT, IN `pEmpate` INT, IN `pVictoriaVisitante` INT, IN `pVictoriaLocal` INT, IN `pFaltas` INT, IN `pGoles` INT, IN `pAtajadas` INT, IN `pTarjetasAmarillas` INT, IN `pTarjetasRojas` INT, IN `pFKIDPartido` INT, IN `pFKIDPlantilla` INT, IN `pFKIDClub` INT, IN `pFKIDSeleccionesNacionales` INT)   BEGIN
+    INSERT INTO tblestadisticas (
+        Posesion, TirosEsquina, Marcador, TiroArco, Empate,
+        VictoriaVisitante, VictoriaLocal, Faltas, Goles, Atajadas,
+        TarjetasAmarillas, TarjetasRojas, FKIDPartido, FKIDPlantilla,
+        FKIDClub, FKIDSeleccionesNacionales
+    ) VALUES (
+        pPosesion, pTirosEsquina, pMarcador, pTiroArco, pEmpate,
+        pVictoriaVisitante, pVictoriaLocal, pFaltas, pGoles, pAtajadas,
+        pTarjetasAmarillas, pTarjetasRojas, pFKIDPartido, pFKIDPlantilla,
+        pFKIDClub, pFKIDSeleccionesNacionales
+    );
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SeleccionarEstadistica` (IN `pID` INT)   BEGIN
+    SELECT * FROM tblestadisticas WHERE ID = pID;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -67,7 +190,7 @@ INSERT INTO `tblclubes` (`ID`, `Nombre`, `Ciudad`, `Direccion`, `Estadio`, `Capa
 (12, 'Luton Town', 'Luton', NULL, 'Kenilworth Road', 10356, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
 (13, 'Manchester City', 'Mánchester', NULL, 'Etihad Stadium', 53400, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
 (14, 'Manchester United', 'Mánchester', NULL, 'Old Trafford', 74310, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
-(15, 'Newcastle United', 'Newcastle', NULL, 'St James\ Park', 52305, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(15, 'Newcastle United', 'Newcastle', NULL, 'St James Park', 52305, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
 (16, 'Nottingham Forest', 'Nottingham', NULL, 'City Ground', 30332, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
 (17, 'Sheffield United', 'Sheffield', NULL, 'Bramall Lane', 32050, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
 (18, 'Tottenham Hotspur', 'Londres', NULL, 'Tottenham Hotspur Stadium', 62850, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL),
@@ -176,6 +299,16 @@ INSERT INTO `tblligas` (`ID`, `Nombre`, `NumeroEquipos`, `FKIDClubes`, `FKIDNaci
 (5, 'National League', 24, NULL, 142, NULL, NULL),
 (6, 'National League North', 24, NULL, 142, NULL, NULL);
 
+--
+-- Disparadores `tblligas`
+--
+DELIMITER $$
+CREATE TRIGGER `after_insert_liga` AFTER INSERT ON `tblligas` FOR EACH ROW BEGIN
+    CALL create_position_table(NEW.ID);
+END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -267,7 +400,7 @@ INSERT INTO `tblnacionalidades` (`ID`, `Nombres`, `Capital`, `Idiomas`, `Contine
 (66, 'Gambia', 'Banjul', 'Inglés', 'África', 'Dalasi gambiano (GMD)', NULL, NULL, NULL),
 (67, 'Georgia', 'Tiflis', 'Georgiano', 'Asia', 'Lari georgiano (GEL)', NULL, NULL, NULL),
 (68, 'Ghana', 'Acra', 'Inglés, Akan', 'África', 'Cedi ghanés (GHS)', NULL, NULL, NULL),
-(69, 'Granada', 'Saint George\´s', 'Inglés', 'América del Norte', 'Dólar del Caribe Oriental (XCD)', NULL, NULL, NULL),
+(69, 'Granada', 'Saint George´s', 'Inglés', 'América del Norte', 'Dólar del Caribe Oriental (XCD)', NULL, NULL, NULL),
 (70, 'Grecia', 'Atenas', 'Griego', 'Europa', 'Euro (EUR)', NULL, NULL, NULL),
 (71, 'Guatemala', 'Ciudad de Guatemala', 'Español', 'América Central', 'Quetzal guatemalteco (GTQ)', NULL, NULL, NULL),
 (72, 'Guinea', 'Conakri', 'Francés', 'África', 'Franco guineano (GNF)', NULL, NULL, NULL),
@@ -813,6 +946,59 @@ CREATE TABLE `tblusuarios` (
   `Género` varchar(50) DEFAULT NULL,
   `FechaNacimiento` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `vistafichajes`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `vistafichajes` (
+`ID` int(11)
+,`TipoFichaje` varchar(50)
+,`ClubAnterior` int(11)
+,`ClubActual` int(11)
+,`CostoFichaje` decimal(10,2)
+,`FKIDTemporada` int(11)
+,`FKIDPlantillas` int(11)
+,`FKIDClubes` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `vista_estadisticas_basicas`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `vista_estadisticas_basicas` (
+`EstadisticaID` int(11)
+,`PartidoID` int(11)
+,`ClubID` int(11)
+,`Posesion` decimal(5,2)
+,`TirosEsquina` int(11)
+,`Marcador` int(11)
+,`Goles` int(11)
+,`TarjetasAmarillas` int(11)
+,`TarjetasRojas` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vistafichajes`
+--
+DROP TABLE IF EXISTS `vistafichajes`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vistafichajes`  AS SELECT `tblfichajes`.`ID` AS `ID`, `tblfichajes`.`TipoFichaje` AS `TipoFichaje`, `tblfichajes`.`ClubAnterior` AS `ClubAnterior`, `tblfichajes`.`ClubActual` AS `ClubActual`, `tblfichajes`.`CostoFichaje` AS `CostoFichaje`, `tblfichajes`.`FKIDTemporada` AS `FKIDTemporada`, `tblfichajes`.`FKIDPlantillas` AS `FKIDPlantillas`, `tblfichajes`.`FKIDClubes` AS `FKIDClubes` FROM `tblfichajes` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vista_estadisticas_basicas`
+--
+DROP TABLE IF EXISTS `vista_estadisticas_basicas`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vista_estadisticas_basicas`  AS SELECT `e`.`ID` AS `EstadisticaID`, `e`.`FKIDPartido` AS `PartidoID`, `e`.`FKIDClub` AS `ClubID`, `e`.`Posesion` AS `Posesion`, `e`.`TirosEsquina` AS `TirosEsquina`, `e`.`Marcador` AS `Marcador`, `e`.`Goles` AS `Goles`, `e`.`TarjetasAmarillas` AS `TarjetasAmarillas`, `e`.`TarjetasRojas` AS `TarjetasRojas` FROM ((`tblestadisticas` `e` left join `tblpartidos` `p` on(`e`.`FKIDPartido` = `p`.`ID`)) left join `tblclubes` `c` on(`e`.`FKIDClub` = `c`.`ID`)) ;
 
 --
 -- Índices para tablas volcadas
