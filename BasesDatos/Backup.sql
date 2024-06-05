@@ -135,8 +135,6 @@ INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) V
 INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('6', 'Femenino', 'Reino Unido', 'Londres', '29', '1');
 INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('7', 'Masculino', 'Italia', 'Roma', '27', '1');
 INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('8', 'Femenino', 'Australia', 'Sídney', '32', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('9', 'Masculino', 'Brasil', 'Río de Janeiro', '31', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('10', 'Femenino', 'México', 'Ciudad de México', '26', '1');
 
 CREATE TABLE `tblligas` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -250,7 +248,7 @@ INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Moneda
 INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('66', 'Gambia', 'Banjul', 'Inglés', 'África', 'Dalasi gambiano (GMD)', '', '', '');
 INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('67', 'Georgia', 'Tiflis', 'Georgiano', 'Asia', 'Lari georgiano (GEL)', '', '', '');
 INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('68', 'Ghana', 'Acra', 'Inglés, Akan', 'África', 'Cedi ghanés (GHS)', '', '', '');
-INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('69', 'Granada', 'Saint Georges', 'Inglés', 'América del Norte', 'Dólar del Caribe Oriental (XCD)', '', '', '');
+INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('69', 'Granada', 'Saint George´s', 'Inglés', 'América del Norte', 'Dólar del Caribe Oriental (XCD)', '', '', '');
 INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('70', 'Grecia', 'Atenas', 'Griego', 'Europa', 'Euro (EUR)', '', '', '');
 INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('71', 'Guatemala', 'Ciudad de Guatemala', 'Español', 'América Central', 'Quetzal guatemalteco (GTQ)', '', '', '');
 INSERT INTO tblnacionalidades (ID, Nombres, Capital, Idiomas, Continente, Monedas, FKIDPlantilla, FKIDLigas, FKIDClubes) VALUES ('72', 'Guinea', 'Conakri', 'Francés', 'África', 'Franco guineano (GNF)', '', '', '');
@@ -774,5 +772,8 @@ CREATE TABLE `tblusuarios` (
   PRIMARY KEY (`IdUsuario`),
   KEY `FK_Usuarios_Roles` (`FKIDRoles`),
   CONSTRAINT `FK_Usuarios_Roles` FOREIGN KEY (`FKIDRoles`) REFERENCES `tblroles` (`IdRol`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO tblusuarios (IdUsuario, FKIDRoles, Nombre, Apellido, Documento, Correo, Contraseña, Token, TokenRecuperacion, Verificado, MembresiaInicio, MembresiaFin, Teléfono, País, Ciudad, Género, FechaNacimiento) VALUES ('2', '1', 'erik', 'hernandez', '2147483647', 'erick.hdz9628@gmail.com', '123456789', 'f14e9e0e04b016c7', '', '1', '0000-00-00', '0000-00-00', '42334232', 'colombia', 'Bogota', 'Masculino', '1223-02-22');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+;
+
+;

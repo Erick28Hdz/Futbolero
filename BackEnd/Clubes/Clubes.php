@@ -23,7 +23,7 @@ if (isset($_GET['eliminar']) && isset($_GET['ID'])) {
 
 // Variables para ordenar y filtrar Parte del filtrado de la tabla.
 $orderBy = isset($_GET['orderBy']) ? $_GET['orderBy'] : 'ID';
-$nombreFilter = isset($_GET['Nombre']) ? mysqli_real_escape_string($conexion, $_GET['Nombre']) : '';
+$nombreFilter = isset($_GET['Nombre']) ? mysqli_real_escape_string($mysqli, $_GET['Nombre']) : '';
 $ciudadFilter = isset($_GET['Ciudad']) ? mysqli_real_escape_string($conexion, $_GET['Ciudad']) : '';
 $direccionFilter = isset($_GET['Direccion']) ? mysqli_real_escape_string($conexion, $_GET['Direccion']) : '';
 $estadioFilter = isset($_GET['Estadio']) ? mysqli_real_escape_string($conexion, $_GET['Estadio']) : '';
@@ -322,8 +322,8 @@ $resultado = $stmt->get_result();
             <div class="filtros">
                 <p class="title">Filtros</p>
                 <!-- Formulario de Buscar Liga -->
-                <form method="POST" action="Ligas.php" class="form">
-                    <label for="search"><input class="input" type="text" name="search" id="search" value="<?php echo isset($_POST['search']) ? $_POST['search'] : ''; ?>"><span>Buscar Liga:</span></label>
+                <form method="POST" action="Clubes.php" class="form">
+                    <label for="search"><input class="input" type="text" name="search" id="search" value="<?php echo isset($_POST['search']) ? $_POST['search'] : ''; ?>"><span>Buscar Club:</span></label>
                     <button type="submit" class="button">Buscar</button>
                 </form>
                 <!-- Formulario de filtrado -->

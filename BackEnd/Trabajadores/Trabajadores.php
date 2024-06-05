@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 $stmt = null; // Declarar la variable $stmt
 include '../Plataforma/conexion.php';
 
+
 // Función para eliminar un usuario por su ID
 function eliminarUsuario($idTrabajador, $conexion)
 {
@@ -23,10 +24,10 @@ if (isset($_GET['eliminar']) && isset($_GET['idTrabajador'])) {
 
 // Variables para ordenar y filtrar Parte del filtrado de la tabla.
 $orderBy = isset($_GET['orderBy']) ? $_GET['orderBy'] : 'idTrabajador';
-$nombreFilter = isset($_GET['Nombre']) ? mysqli_real_escape_string($conexion, $_GET['Nombre']) : '';
-$areaFilter = isset($_GET['Area']) ? mysqli_real_escape_string($conexion, $_GET['Area']) : '';
-$sueldoFilter = isset($_GET['Sueldo']) ? mysqli_real_escape_string($conexion, $_GET['Sueldo']) : '';
-$rolFilter = isset($_GET['FKIDRoles']) ? mysqli_real_escape_string($conexion, $_GET['FKIDRoles']) : '';
+$nombreFilter = isset($_GET['Nombre']) ? mysqli_real_escape_string($mysqli, $_GET['Nombre']) : '';
+$areaFilter = isset($_GET['Area']) ? mysqli_real_escape_string($mysqli, $_GET['Area']) : '';
+$sueldoFilter = isset($_GET['Sueldo']) ? mysqli_real_escape_string($mysqli, $_GET['Sueldo']) : '';
+$rolFilter = isset($_GET['FKIDRoles']) ? mysqli_real_escape_string($mysqli, $_GET['FKIDRoles']) : '';
 
 
 // Consulta SQL con cláusulas ORDER BY y WHERE
@@ -98,7 +99,7 @@ if (isset($_POST['search'])) {
     $searchTerm = $_POST['search'];
 
     // Validar y limpiar la entrada del usuario
-    $searchTerm = mysqli_real_escape_string($conexion, $searchTerm);
+    $searchTerm = mysqli_real_escape_string($mysqli, $searchTerm);
 
     if (!empty($searchTerm)) {
         // Construir la consulta SQL con cláusulas WHERE para aplicar los filtros

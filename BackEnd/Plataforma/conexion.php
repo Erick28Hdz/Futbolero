@@ -7,7 +7,8 @@ $pass = "";
 $db = "futbolerodb";
 
 try {
-    $conexion = new MySQLDatabase($server, $user, $pass, $db);
+    $conexion = new MySQLDatabase('localhost', 'root', '', 'futbolerodb');
+    $mysqli = $conexion->getConnection();  // Aquí obtienes el objeto mysqli
 } catch (Exception $e) {
-    die($e->getMessage());
+    die("Error de conexión: " . $e->getMessage());
 }
