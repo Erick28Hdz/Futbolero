@@ -15,13 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO tblinvitados (Género, País, Ciudad, Edad, FKIDRoles) VALUES (?, ?, ?, ?, (SELECT IdRol FROM tblroles WHERE Nombre = ?))";
     $stmt = $conexion->prepare($sql);
     if (!$stmt) {
-        die('Error en la preparación de la consulta: ' . $conexion->error);
+        die('Error en la preparación de la consulta: ' . $mysqli->error);
     }
     $stmt->bind_param("sssss", $genero, $pais, $ciudad, $edad, $rol);
 
     if ($stmt->execute()) {
         // Inserción exitosa, redirige a la página de inicio
-        header("Location: /BackEnd/Invitados/Invitados.php");
+        header("Location: /../FrontEnd/html/Inicio_sesion/Inicio.html");
         exit(); // Asegura que no se ejecute más código después de la redirección
     } else {
         // Manejo de error en caso de fallo de la inserción
@@ -29,5 +29,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-$conexion->close();
+$mysqli->close();
 ?>

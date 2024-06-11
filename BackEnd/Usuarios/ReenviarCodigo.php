@@ -91,5 +91,5 @@ if (isset($_POST['Correo'])) {
 }
 
 // Cerrar la conexión a la base de datos
-$conexion->close();
+$mysqli->close();
 ?>

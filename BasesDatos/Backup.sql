@@ -126,15 +126,8 @@ CREATE TABLE `tblinvitados` (
   PRIMARY KEY (`IdInvitado`),
   KEY `FK_Invitados_Roles` (`FKIDRoles`),
   CONSTRAINT `FK_Invitados_Roles` FOREIGN KEY (`FKIDRoles`) REFERENCES `tblroles` (`IdRol`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('1', 'Masculino', 'España', 'Madrid', '28', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('2', 'Femenino', 'Estados Unidos', 'Nueva York', '34', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('3', 'Masculino', 'Francia', 'París', '22', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('4', 'Femenino', 'Canadá', 'Toronto', '30', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('5', 'Masculino', 'Alemania', 'Berlín', '25', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('6', 'Femenino', 'Reino Unido', 'Londres', '29', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('7', 'Masculino', 'Italia', 'Roma', '27', '1');
-INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('8', 'Femenino', 'Australia', 'Sídney', '32', '1');
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO tblinvitados (IdInvitado, Género, País, Ciudad, Edad, FKIDRoles) VALUES ('17', 'Masculino', 'Colombia', 'Bogotá', '', '1');
 
 CREATE TABLE `tblligas` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -740,16 +733,16 @@ CREATE TABLE `tbltrabajadores` (
   `IdTrabajador` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(255) DEFAULT NULL,
   `CorreoElectronico` varchar(255) DEFAULT NULL,
+  `Contraseña` varchar(11) NOT NULL,
   `Area` varchar(255) DEFAULT NULL,
   `Sueldo` decimal(10,2) DEFAULT NULL,
   `FKIDRoles` int(11) DEFAULT NULL,
   PRIMARY KEY (`IdTrabajador`),
   KEY `FK_Trabajadores_Roles` (`FKIDRoles`),
   CONSTRAINT `FK_Trabajadores_Roles` FOREIGN KEY (`FKIDRoles`) REFERENCES `tblroles` (`IdRol`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-INSERT INTO tbltrabajadores (IdTrabajador, Nombre, CorreoElectronico, Area, Sueldo, FKIDRoles) VALUES ('1', 'Erik Darney', 'Erick.hdz9628@gmail.com', 'Administrador', '2000000.00', '5');
-INSERT INTO tbltrabajadores (IdTrabajador, Nombre, CorreoElectronico, Area, Sueldo, FKIDRoles) VALUES ('2', 'Juan Pablo', 'juanpabl1535@gmail.com', 'Administrador', '2000000.00', '5');
-INSERT INTO tbltrabajadores (IdTrabajador, Nombre, CorreoElectronico, Area, Sueldo, FKIDRoles) VALUES ('3', 'Gabriel', 'gabrielchaparro@gmail.com', 'Administrador', '2000000.00', '5');
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO tbltrabajadores (IdTrabajador, Nombre, CorreoElectronico, Contraseña, Area, Sueldo, FKIDRoles) VALUES ('2', 'Juan Pablo', 'juanpabl1535@gmail.com', '0', 'Administrador', '2000000.00', '5');
+INSERT INTO tbltrabajadores (IdTrabajador, Nombre, CorreoElectronico, Contraseña, Area, Sueldo, FKIDRoles) VALUES ('3', 'Gabriel', 'gabrielchaparro@gmail.com', '0', 'Administrador', '2000000.00', '5');
 
 CREATE TABLE `tblusuarios` (
   `IdUsuario` int(11) NOT NULL AUTO_INCREMENT,
@@ -772,7 +765,8 @@ CREATE TABLE `tblusuarios` (
   PRIMARY KEY (`IdUsuario`),
   KEY `FK_Usuarios_Roles` (`FKIDRoles`),
   CONSTRAINT `FK_Usuarios_Roles` FOREIGN KEY (`FKIDRoles`) REFERENCES `tblroles` (`IdRol`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO tblusuarios (IdUsuario, FKIDRoles, Nombre, Apellido, Documento, Correo, Contraseña, Token, TokenRecuperacion, Verificado, MembresiaInicio, MembresiaFin, Teléfono, País, Ciudad, Género, FechaNacimiento) VALUES ('2', '1', 'erik', 'hernandez', '1234567890', 'erick.hdz9628@gmail.com', '12345789', 'ab27ed0233214da8', '', '1', '0000-00-00', '0000-00-00', '123456789', 'Colombia', 'Bogotá', 'Masculino', '1111-12-12');
 
 ;
 

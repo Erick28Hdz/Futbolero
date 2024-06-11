@@ -14,7 +14,7 @@ try {
     $resultado = $conexion->query($query);
 
     if (!$resultado) {
-        throw new Exception("Error al ejecutar la consulta: " . $conexion->error);
+        throw new Exception("Error al ejecutar la consulta: " . $mysqli->error);
     }
 
     // Obtener los resultados de la consulta

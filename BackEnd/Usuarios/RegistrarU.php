@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-require __DIR__ . '../Bibliotecas/vendor/autoload.php';
+require __DIR__ . '/../Bibliotecas/vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Obtiene los datos del formulario
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         // Verifica si el correo ya existe en la base de datos
         $verificarCorreo = "SELECT COUNT(*) as total FROM tblusuarios WHERE Correo = ?";
-        $stmtVerificar = $conexion->prepare($verificarCorreo);
+        $stmtVerificar = $mysqli->prepare($verificarCorreo);
         $stmtVerificar->bind_param("s", $correo);
         $stmtVerificar->execute();
         $resultVerificar = $stmtVerificar->get_result();
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $sql = "INSERT INTO tblusuarios (Nombre, Apellido, Documento, Correo, Contraseña, Ciudad, Teléfono, País, Género, FechaNacimiento, Token, FKIDRoles) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conexion->prepare($sql);
             if (!$stmt) {
-                die('Error en la preparación de la consulta: ' . $conexion->error);
+                die('Error en la preparación de la consulta: ' . $mysqli->error);
             }
             $stmt->bind_param("sssssssssssi", $nombre, $apellido, $documento, $correo, $contraseña, $ciudad, $telefono, $pais, $genero, $fechanacimiento, $token, $defaultRoleId);
 
@@ -103,4 +103,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
 }
 
-$conexion->close();
+$mysqli->close();
