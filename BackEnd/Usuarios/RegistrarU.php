@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
+// Cargar el autoloader de Composer
 require __DIR__ . '/../Bibliotecas/vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -43,12 +43,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Valor predeterminado del rol
             $defaultRoleId = 1; // Rol de invitado
 
+            // Hashear la contraseña
+            $hashedPassword = password_hash($contraseña, PASSWORD_DEFAULT);
+
             $sql = "INSERT INTO tblusuarios (Nombre, Apellido, Documento, Correo, Contraseña, Ciudad, Teléfono, País, Género, FechaNacimiento, Token, FKIDRoles) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            $stmt = $conexion->prepare($sql);
+            $stmt = $mysqli->prepare($sql);
             if (!$stmt) {
                 die('Error en la preparación de la consulta: ' . $mysqli->error);
             }
-            $stmt->bind_param("sssssssssssi", $nombre, $apellido, $documento, $correo, $contraseña, $ciudad, $telefono, $pais, $genero, $fechanacimiento, $token, $defaultRoleId);
+            $stmt->bind_param("sssssssssssi", $nombre, $apellido, $documento, $correo, $hashedPassword, $ciudad, $telefono, $pais, $genero, $fechanacimiento, $token, $defaultRoleId);
 
             if ($stmt->execute()) {
                 // Envía correo electrónico de verificación con PHPMailer
@@ -104,3 +107,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $mysqli->close();
+?>

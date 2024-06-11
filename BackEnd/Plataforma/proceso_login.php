@@ -7,13 +7,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $contrasena = $_POST['contrasena'];
 
     // Buscar en la tabla de usuarios
-    $sql_usuario = "SELECT * FROM tblusuarios WHERE Correo = '$usuario'";
-    $resultado_usuario = $conexion->query($sql_usuario);
+    $sql_usuario = "SELECT * FROM tblusuarios WHERE Correo = ?";
+    $stmt_usuario = $conexion->prepare($sql_usuario);
+    $stmt_usuario->bind_param("s", $usuario);
+    $stmt_usuario->execute();
+    $resultado_usuario = $stmt_usuario->get_result();
 
     // Si se encuentra el usuario en la tabla de usuarios
     if ($resultado_usuario->num_rows == 1) {
         $usuario_info = $resultado_usuario->fetch_assoc();
-        if ($usuario_info['Contraseña'] == $contrasena) {
+        if (password_verify($contrasena, $usuario_info['Contraseña'])) {
             $_SESSION['Correo'] = $usuario;
             $_SESSION['TipoUsuario'] = 'Regular';
             $_SESSION['Rol'] = $usuario_info['Rol']; // Guardar el rol del usuario
@@ -26,13 +29,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Buscar en la tabla de trabajadores si no se encuentra el usuario en la tabla de usuarios
-    $sql_trabajador = "SELECT * FROM tbltrabajadores WHERE CorreoElectronico = '$usuario'";
-    $resultado_trabajador = $conexion->query($sql_trabajador);
+    $sql_trabajador = "SELECT * FROM tbltrabajadores WHERE CorreoElectronico = ?";
+    $stmt_trabajador = $conexion->prepare($sql_trabajador);
+    $stmt_trabajador->bind_param("s", $usuario);
+    $stmt_trabajador->execute();
+    $resultado_trabajador = $stmt_trabajador->get_result();
 
     // Si se encuentra el usuario en la tabla de trabajadores
     if ($resultado_trabajador->num_rows == 1) {
         $trabajador_info = $resultado_trabajador->fetch_assoc();
-        if ($trabajador_info['Contraseña'] == $contrasena) {
+        if (password_verify($contrasena, $trabajador_info['Contraseña'])) {
             $_SESSION['Correo'] = $usuario;
             $_SESSION['TipoUsuario'] = 'Trabajador';
             $_SESSION['Rol'] = $trabajador_info['Rol']; // Guardar el rol del trabajador
