@@ -9,20 +9,20 @@ use PHPMailer\PHPMailer\Exception;
 require __DIR__ . '/../Bibliotecas/vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Obtiene los datos del formulario
-    $nombre = $_POST['Nombre'];
-    $apellido = $_POST['Apellido'];
-    $documento = $_POST['Documento'];
-    $correo = $_POST['Correo'];
-    $contraseña = $_POST['Contraseña'];
-    $telefono = $_POST['Teléfono'];
-    $pais = $_POST['País'];
-    $ciudad = $_POST['Ciudad'];
-    $genero = $_POST['Género'];
-    $fechanacimiento = $_POST['FechaNacimiento'];
+     // Obtiene los datos del formulario y sanitizarlos
+     $nombre = filter_input(INPUT_POST, 'Nombre', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+     $apellido = filter_input(INPUT_POST, 'Apellido', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+     $documento = filter_input(INPUT_POST, 'Documento', FILTER_SANITIZE_NUMBER_INT);
+     $correo = filter_input(INPUT_POST, 'Correo', FILTER_VALIDATE_EMAIL);
+     $contraseña = $_POST['Contraseña'];
+     $telefono = filter_input(INPUT_POST, 'Teléfono', FILTER_SANITIZE_NUMBER_INT);
+     $pais = filter_input(INPUT_POST, 'País', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+     $ciudad = filter_input(INPUT_POST, 'Ciudad', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+     $genero = filter_input(INPUT_POST, 'Género', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+     $fechanacimiento = $_POST['FechaNacimiento'];
 
     // Verificar campos obligatorios
-    if (empty($nombre) || empty($apellido) || empty($documento) || empty($correo) || empty($contraseña) || empty($telefono) || empty($pais) || empty($ciudad) || empty($genero) || empty($fechanacimiento)) {
+    if (!$nombre || !$apellido || !$documento || !$correo || !$contraseña || !$telefono || !$pais || !$ciudad || !$genero || !$fechanacimiento) {
         echo "Error: Todos los campos son obligatorios. Por favor, complete el formulario.";
     } else {
         // Verifica si el correo ya existe en la base de datos
@@ -101,9 +101,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "Error al agregar el usuario: " . $stmt->error;
             }
         }
+        $stmtVerificar->close();
+        $stmt->close();
     }
-    $stmtVerificar->close();
-    $stmt->close();
 }
 
 $mysqli->close();
