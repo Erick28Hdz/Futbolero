@@ -1,5 +1,5 @@
 <?php
-require '/Futbolero/BasesDatos/MySQLDatabase.php';
+require_once __DIR__ . '/../../BasesDatos/MySQLDatabase.php';
 
 $server= "localhost";
 $user = "root";

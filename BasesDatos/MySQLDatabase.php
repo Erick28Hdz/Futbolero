@@ -1,5 +1,5 @@
 <?php
-require 'DatabaseInterface.php';
+require_once 'DatabaseInterface.php';
 class MySQLDatabase implements DatabaseInterface {
     private $conexion;
 

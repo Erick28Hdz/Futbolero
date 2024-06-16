@@ -23,7 +23,7 @@ if (isset($_GET['eliminar']) && isset($_GET['ID'])) {
 
 // Variables para ordenar y filtrar Parte del filtrado de la tabla.
 $orderBy = isset($_GET['orderBy']) ? $_GET['orderBy'] : 'ID';
-$dorsalFilter = isset($_GET['Dorsal']) ? mysqli_real_escape_string($conexion, $_GET['Dorsal']) : '';
+$dorsalFilter = isset($_GET['Dorsal']) ? mysqli_real_escape_string($mysql, $_GET['Dorsal']) : '';
 $posicionFilter = isset($_GET['Posicion']) ? mysqli_real_escape_string($conexion, $_GET['Posicion']) : '';
 $nombresFilter = isset($_GET['Nombres']) ? mysqli_real_escape_string($conexion, $_GET['Nombres']) : '';
 $apellidosFilter = isset($_GET['Apellidos']) ? mysqli_real_escape_string($conexion, $_GET['Apellidos']) : '';
